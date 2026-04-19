@@ -41,49 +41,51 @@
       </div>
     </div>
   </nav>
-  <section id="profile" class="hero-section">
-    <div class="hero-content">
-      <p class="section__text__p1">Hello, I'm</p>
-      <h1 class="title">Nishad</h1>
-      <p class="section__text__p2">Frontend Developer</p>
-      <div class="btn-container">
-        <button class="btn btn-depth btn-primary" onclick="window.open('./assets/resume-example.pdf')">
-          Download CV
-        </button>
-        <button class="btn btn-depth btn-secondary" onclick="location.href='./#contact'">
-          Contact Info
-        </button>
+  <section id="profile" class="hero-section text-left">
+    <div class="grid-container align-center">
+      <div class="col-span-6 hero-content">
+        <p class="section__text__p1 mb-8">Hello, I'm</p>
+        <h1 class="title">Nishad</h1>
+        <p class="section__text__p2 mb-24">Frontend Developer</p>
+        <div class="btn-container">
+          <button class="btn btn-depth btn-primary" onclick="window.open('./assets/resume-example.pdf')">
+            Download CV
+          </button>
+          <button class="btn btn-depth btn-secondary" onclick="location.href='./#contact'">
+            Contact Info
+          </button>
+        </div>
+        <div id="socials-container">
+          <img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon social-icon"
+            onclick="location.href='https://www.linkedin.com/in/nishad-sharma'" />
+          <img src="./assets/github.png" alt="My Github profile" class="icon social-icon"
+            onclick="location.href='https://github.com/NishadSharma'" />
+        </div>
       </div>
-      <div id="socials-container">
-        <img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon social-icon"
-          onclick="location.href='https://www.linkedin.com/in/nishad-sharma'" />
-        <img src="./assets/github.png" alt="My Github profile" class="icon social-icon"
-          onclick="location.href='https://github.com/NishadSharma'" />
-      </div>
-    </div>
-
-    <div class="hero-image-container">
-      <div class="floating-card">
-        <div class="card-glow"></div>
-        <img src="./assets/3d_portrait.png" alt="Nishad profile picture" />
+  
+      <div class="col-span-6 hero-image-container">
+        <div class="floating-card">
+          <div class="card-glow"></div>
+          <img src="./assets/3d_portrait.png" alt="Nishad profile picture" />
+        </div>
       </div>
     </div>
   </section>
   <section id="about">
-    <div class="bento-header">
-      <p class="section__text__p1">Get To Know More</p>
+    <div class="text-center mb-48">
+      <p class="section__text__p1 mb-8">Get To Know More</p>
       <h1 class="title">About Me</h1>
     </div>
 
-    <div class="bento-grid">
+    <div class="grid-container">
       <!-- Portrait Tile -->
-      <div class="bento-tile bento-portrait">
+      <div class="bento-tile bento-portrait col-span-4">
         <img src="./assets/bw_portrait.png" alt="Artistic black and white portrait" />
         <div class="bento-glow"></div>
       </div>
 
       <!-- Experience Tile -->
-      <div class="bento-tile bento-stat">
+      <div class="bento-tile bento-stat col-span-4">
         <img src="./assets/3d_icon_experience.png" alt="Experience icon" class="bento-icon" />
         <div class="bento-stat-content">
           <h3>2+ Years</h3>
@@ -93,7 +95,7 @@
       </div>
 
       <!-- Education Tile -->
-      <div class="bento-tile bento-stat">
+      <div class="bento-tile bento-stat col-span-4">
         <img src="./assets/3d_icon_education.png" alt="Education icon" class="bento-icon" />
         <div class="bento-stat-content">
           <h3>B.Tech Degree</h3>
@@ -103,7 +105,7 @@
       </div>
 
       <!-- Bio Tile -->
-      <div class="bento-tile bento-bio">
+      <div class="bento-tile bento-bio col-span-8">
         <p>
           I am a passionate frontend developer with a keen eye for cutting-edge UI/UX design. I specialize in building
           responsive, accessible, and high-performance web applications using modern technologies. My artistic
@@ -118,18 +120,18 @@
     <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#experience'" />
   </section>
   <section id="experience" class="tech-stack-section">
-    <div class="tech-header">
-      <p class="section__text__p1">Explore My</p>
+    <div class="text-center mb-48">
+      <p class="section__text__p1 mb-8">Explore My</p>
       <h1 class="title">Tech Stack</h1>
     </div>
 
-    <div class="stack-split-container">
+    <div class="grid-container flex-grow-on-mobile">
       <div class="blur-sphere sphere-1"></div>
       <div class="blur-sphere sphere-2"></div>
       <div class="blur-sphere sphere-3"></div>
 
       <!-- Frontend -->
-      <div class="stack-column glass-panel">
+      <div class="col-span-6 stack-column glass-panel">
         <h2 class="stack-title">Frontend Development</h2>
         <div class="floating-cards-grid">
 
@@ -186,7 +188,7 @@
       </div>
 
       <!-- Backend -->
-      <div class="stack-column glass-panel">
+      <div class="col-span-6 stack-column glass-panel">
         <h2 class="stack-title">Backend Tools</h2>
         <div class="floating-cards-grid">
 
@@ -225,14 +227,14 @@
     <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#projects'" />
   </section>
   <section id="projects" class="projects-section">
-    <div class="projects-header">
-      <p class="section__text__p1">Browse My Recent</p>
+    <div class="text-center mb-48">
+      <p class="section__text__p1 mb-8">Browse My Recent</p>
       <h1 class="title">Projects</h1>
     </div>
 
-    <div class="projects-grid">
+    <div class="grid-container">
       <!-- Project 1 -->
-      <div class="project-card">
+      <div class="col-span-4 project-card">
         <div class="project-image-wrapper">
           <img src="./assets/iso_pj_1.png" alt="Project 1 Mockup" class="project-iso-img" />
         </div>
@@ -246,7 +248,7 @@
       </div>
 
       <!-- Project 2 -->
-      <div class="project-card">
+      <div class="col-span-4 project-card">
         <div class="project-image-wrapper">
           <img src="./assets/iso_pj_2.png" alt="Project 2 Mockup" class="project-iso-img" />
         </div>
@@ -260,7 +262,7 @@
       </div>
 
       <!-- Project 3 -->
-      <div class="project-card">
+      <div class="col-span-4 project-card">
         <div class="project-image-wrapper">
           <img src="./assets/iso_pj_3.png" alt="Project 3 Mockup" class="project-iso-img" />
         </div>
@@ -277,16 +279,20 @@
     <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#contact'" />
   </section>
   <section id="contact">
-    <p class="section__text__p1">Get in Touch</p>
-    <h1 class="title">Contact Me</h1>
-    <div class="contact-info-upper-container">
-      <div class="contact-info-container">
-        <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon" />
-        <p><a href="mailto:examplemail@gmail.com">Example@gmail.com</a></p>
-      </div>
-      <div class="contact-info-container">
-        <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" />
-        <p><a href="https://www.linkedin.com">LinkedIn</a></p>
+    <div class="text-center mb-48">
+      <p class="section__text__p1 mb-8">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+    </div>
+    <div class="grid-container">
+      <div class="col-span-8 col-start-3 contact-info-upper-container">
+        <div class="contact-info-container">
+          <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon" />
+          <p><a href="mailto:examplemail@gmail.com">Example@gmail.com</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" />
+          <p><a href="https://www.linkedin.com">LinkedIn</a></p>
+        </div>
       </div>
     </div>
   </section>
