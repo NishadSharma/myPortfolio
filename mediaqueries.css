@@ -18,6 +18,10 @@
   }
   #hamburger-nav {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    height: 80px;
   }
   #experience,
   .experience-details-container {
@@ -26,6 +30,24 @@
   #profile,
   .section-container {
     display: block;
+  }
+  .hero-section {
+    flex-direction: column-reverse;
+    gap: 3rem;
+    height: auto;
+    padding-top: 120px;
+  }
+  .hero-content,
+  .hero-image-container {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  #socials-container {
+    justify-content: center;
   }
   .arrow {
     display: none;
@@ -42,8 +64,26 @@
     height: 275px;
     margin: 0 auto 2rem;
   }
+  .floating-card {
+    max-width: 300px;
+    margin: 0 auto;
+  }
   .about-containers {
     margin-top: 0;
+  }
+  .bento-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .bento-portrait {
+    grid-column: 1 / 3;
+    aspect-ratio: 16 / 9;
+  }
+  .bento-bio {
+    grid-column: 1 / 3;
+  }
+  .stack-split-container {
+    flex-direction: column;
+    align-items: stretch;
   }
 }
 
@@ -91,13 +131,30 @@
     height: 46vw;
     justify-content: center;
   }
+  .floating-card {
+    max-width: 240px;
+  }
   .section__text__p2 {
     font-size: 1.25rem;
   }
   .title {
-    font-size: 2rem;
+    font-size: 2.8rem;
   }
   .text-container {
     text-align: justify;
+  }
+  .bento-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .bento-portrait,
+  .bento-bio {
+    grid-column: 1 / 2;
+  }
+  .bento-tile {
+    padding: 1.5rem;
+  }
+  .floating-cards-grid {
+    grid-template-columns: 1fr;
   }
 }
