@@ -1,125 +1,99 @@
-@media screen and (max-width: 1400px) {
-  #profile {
-    height: 83vh;
-    margin-bottom: 6rem;
-  }
-  .about-containers {
-    flex-wrap: wrap;
-  }
-  #contact,
-  #projects {
-    height: fit-content;
-  }
-}
-
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1024px) {
   #desktop-nav {
     display: none;
   }
+  
   #hamburger-nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 5%;
-    height: 80px;
+    height: 60px;
   }
-  #experience,
-  .experience-details-container {
-    margin-top: 2rem;
-  }
-  #profile,
-  .section-container {
-    display: block;
-  }
-  
+
   .grid-container {
     grid-template-columns: repeat(8, 1fr);
   }
-  .col-span-4, .col-span-6 { grid-column: span 8; }
-  .bento-portrait { grid-column: span 8; grid-row: span 1; }
-  .bento-stat { grid-column: span 4; }
-  section { padding: 80px 5%; }
   
-  .hero-content { align-items: center; text-align: center; margin-bottom: 3rem; }
-  .hero-image-container { width: 100%; display: flex; justify-content: center; }
-
-  #socials-container {
-    justify-content: center;
-  }
-  .arrow {
-    display: none;
-  }
-  .floating-card {
-    max-width: 300px;
-    margin: 0 auto;
-  }
-  .about-containers {
-    margin-top: 0;
+  .col-span-4, .col-span-6 { grid-column: span 8; }
+  .bento-portrait { grid-column: span 8; grid-row: span 1; height: 300px; }
+  .bento-stat { grid-column: span 4; }
+  
+  section { padding: 120px 5% 60px 5%; }
+  
+  .hero-section {
+    padding-top: 140px;
+    min-height: 80vh;
   }
 }
 
-@media screen and (max-width: 600px) {
-  #contact,
-  footer {
-    height: 40vh;
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: 4rem;
   }
-  #profile {
-    height: 83vh;
-    margin-bottom: 0;
+  
+  .title-secondary {
+    font-size: 2.75rem;
   }
-  article {
-    font-size: 1rem;
-  }
-  footer nav {
-    height: fit-content;
-    margin-bottom: 2rem;
-  }
-  .about-containers,
-  .contact-info-upper-container,
-  .btn-container {
-    flex-wrap: wrap;
-  }
-  .contact-info-container {
-    margin: 0;
-  }
-  .contact-info-container p,
-  .nav-links li a {
-    font-size: 1rem;
-  }
-  .experience-sub-title {
-    font-size: 1.25rem;
-  }
-  .logo {
-    font-size: 1.5rem;
-  }
-  .nav-links {
-    flex-direction: column;
-    gap: 0.5rem;
-    text-align: center;
+  
+  .section__text__p2 {
+    font-size: 1.2rem;
   }
   
   .grid-container {
     grid-template-columns: repeat(4, 1fr);
   }
-  .col-span-4, .col-span-6, .col-span-8, .bento-stat { grid-column: span 4; }
-  section { padding: 60px 5%; }
+  
+  .col-span-4, .col-span-6, .col-span-8, .col-span-12, .bento-stat { 
+    grid-column: span 4; 
+  }
+  
+  .btn-container {
+    flex-direction: column;
+    padding: 0 10%;
+  }
 
-  .floating-card {
-    max-width: 240px;
-  }
-  .section__text__p2 {
-    font-size: 1.25rem;
-  }
-  .title {
-    font-size: 2.8rem;
-  }
-  .text-container {
-    text-align: justify;
-  }
   .bento-tile {
-    padding: 1.5rem;
+    padding: 2rem;
   }
-  .floating-cards-grid {
-    grid-template-columns: 1fr;
+
+  .stack-column {
+    padding: 2rem;
+  }
+  
+  .contact-info-upper-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .contact-info-container {
+    width: 100%;
+    max-width: 320px;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .title {
+    font-size: 3rem;
+    letter-spacing: -0.02em;
+  }
+  
+  .title-secondary {
+    font-size: 2.25rem;
+  }
+
+  section { padding: 100px 5% 40px 5%; }
+
+  .hero-main-img {
+    max-width: 200px;
+  }
+  
+  .project-card {
+    padding: 1.25rem;
+  }
+  
+  .contact-info-container {
+    padding: 0.8rem 1.5rem;
   }
 }
