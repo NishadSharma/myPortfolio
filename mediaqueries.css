@@ -71,6 +71,24 @@
     max-width: 320px;
     justify-content: center;
   }
+
+  .modal-content {
+    padding: 2rem;
+    width: 95%;
+  }
+
+  .modal-title {
+    font-size: 2rem;
+  }
+
+  .card-fan-container {
+    height: 300px;
+  }
+
+  .fan-card {
+    width: 180px;
+    height: 260px;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -95,5 +113,45 @@
   
   .contact-info-container {
     padding: 0.8rem 1.5rem;
+  }
+
+  /* Modal Mobile Tweaks */
+  .modal-content {
+    padding: 1.5rem;
+    overflow-y: auto;
+    max-height: 90vh;
+  }
+
+  .modal-title {
+    font-size: 1.75rem;
+  }
+
+  .modal-desc {
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+  }
+
+  /* Convert Fan to Horizontal Scroll on Mobile */
+  .card-fan-container {
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding: 1rem 0 2rem 0;
+    scroll-snap-type: x mandatory;
+    gap: 1rem;
+  }
+
+  .fan-card {
+    position: relative;
+    flex: 0 0 160px;
+    height: 240px;
+    transform: none !important; /* override inline transforms */
+    scroll-snap-align: start;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  }
+
+  .fan-card:hover {
+    transform: translateY(-8px) !important;
   }
 }

@@ -30,3 +30,21 @@ document.addEventListener("DOMContentLoaded", () => {
     revealOnScroll.observe(el);
   });
 });
+
+function openCommunityModal() {
+  document.getElementById('community-modal').style.display = 'flex';
+  document.body.style.overflow = 'hidden'; // Prevent background scrolling
+}
+
+function closeCommunityModal() {
+  document.getElementById('community-modal').style.display = 'none';
+  document.body.style.overflow = 'auto';
+}
+
+// Close modal when clicking outside
+window.onclick = function(event) {
+  const modal = document.getElementById('community-modal');
+  if (event.target == modal) {
+    closeCommunityModal();
+  }
+}
