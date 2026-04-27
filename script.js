@@ -31,20 +31,28 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+function openModal(modalId) {
+  document.getElementById(modalId).style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal(modalId) {
+  document.getElementById(modalId).style.display = 'none';
+  document.body.style.overflow = 'auto';
+}
+
 function openCommunityModal() {
-  document.getElementById('community-modal').style.display = 'flex';
-  document.body.style.overflow = 'hidden'; // Prevent background scrolling
+  openModal('community-modal');
 }
 
 function closeCommunityModal() {
-  document.getElementById('community-modal').style.display = 'none';
-  document.body.style.overflow = 'auto';
+  closeModal('community-modal');
 }
 
 // Close modal when clicking outside
 window.onclick = function(event) {
-  const modal = document.getElementById('community-modal');
-  if (event.target == modal) {
-    closeCommunityModal();
+  if (event.target.classList.contains('modal-overlay')) {
+    event.target.style.display = 'none';
+    document.body.style.overflow = 'auto';
   }
 }

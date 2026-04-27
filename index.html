@@ -12,7 +12,7 @@
 
 <body>
   <nav id="desktop-nav" class="glass-nav">
-    <div class="logo">Nishad.</div>
+    <div class="logo"> myPortfolio.</div>
     <div>
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
@@ -25,7 +25,7 @@
   </nav>
 
   <nav id="hamburger-nav" class="glass-nav">
-    <div class="logo">Nishad.</div>
+    <div class="logo">myPortfolio.</div>
     <div class="hamburger-menu">
       <div class="hamburger-icon" onclick="toggleMenu()">
         <span></span>
@@ -48,7 +48,7 @@
         <h1 class="title">Nishad.</h1>
         <p class="section__text__p2 mb-32">Cybersecurity & Networks. UI/UX Design.</p>
         <div class="btn-container hero-btns">
-          <button class="btn btn-primary" onclick="window.open('./assets/resume-example.pdf')">
+          <button class="btn btn-primary" onclick="window.open('./assets/Nishad_CV_Gen.pdf')">
             View Resume
           </button>
           <button class="btn btn-secondary" onclick="location.href='./#contact'">
@@ -57,7 +57,7 @@
         </div>
       </div>
       <div class="hero-image-wrapper">
-        <img src="./assets/3d_portrait.png" alt="Nishad profile picture" class="hero-main-img" />
+        <img src="./assets/myPic.jpg" alt="Nishad profile picture" class="hero-main-img" />
       </div>
     </section>
 
@@ -195,7 +195,7 @@
             <div class="project-btn-container">
               <button class="pill-btn pill-primary"
                 onclick="location.href='https://github.com/NishadSharma/smartBus'">Github</button>
-              <button class="pill-btn pill-secondary" onclick="location.href='https://github.com/'">Live Demo</button>
+              <button class="pill-btn pill-secondary" onclick="openModal('project1-modal')">View More</button>
             </div>
           </div>
         </div>
@@ -209,7 +209,7 @@
             <h3 class="project-title">Project Two</h3>
             <div class="project-btn-container">
               <button class="pill-btn pill-primary" onclick="location.href='https://github.com/'">Github</button>
-              <button class="pill-btn pill-secondary" onclick="location.href='https://github.com/'">Live Demo</button>
+              <button class="pill-btn pill-secondary" onclick="openModal('project2-modal')">View More</button>
             </div>
           </div>
         </div>
@@ -223,7 +223,7 @@
             <h3 class="project-title">Project Three</h3>
             <div class="project-btn-container">
               <button class="pill-btn pill-primary" onclick="location.href='https://github.com/'">Github</button>
-              <button class="pill-btn pill-secondary" onclick="location.href='https://github.com/'">Live Demo</button>
+              <button class="pill-btn pill-secondary" onclick="openModal('project3-modal')">View More</button>
             </div>
           </div>
         </div>
@@ -277,36 +277,37 @@
 
           <div class="card-fan-container">
             <div class="fan-card" style="--rotation: -25deg; --translation: -150px; --z-index: 1;">
-              <div class="fan-card-img" style="background-image: url('./assets/iso_pj_1.png');"></div>
+              <div class="fan-card-img" style="background-image: url('./assets/wasteWarriors/office.jpg');"></div>
               <div class="fan-card-text">
-                <h4>Awareness</h4>
-                <p>Sustainable waste campaigns.</p>
+                <h4>Office</h4>
+                <p>Dharamshala.</p>
               </div>
             </div>
             <div class="fan-card" style="--rotation: -15deg; --translation: -90px; --z-index: 2;">
-              <div class="fan-card-img" style="background-image: url('./assets/iso_pj_2.png');"></div>
+              <div class="fan-card-img" style="background-image: url('./assets/wasteWarriors/workerInteraction.jpg');">
+              </div>
               <div class="fan-card-text">
-                <h4>Data</h4>
-                <p>Metrics on waste handling.</p>
+                <h4>Workers</h4>
+                <p>Interaction Session.</p>
               </div>
             </div>
             <div class="fan-card" style="--rotation: -5deg; --translation: -30px; --z-index: 3;">
-              <div class="fan-card-img" style="background-image: url('./assets/iso_pj_3.png');"></div>
+              <div class="fan-card-img" style="background-image: url('./assets/wasteWarriors/insideWork.jpg');"></div>
               <div class="fan-card-text">
-                <h4>Outreach</h4>
-                <p>Multidisciplinary planning.</p>
+                <h4>Workshop</h4>
+                <p>New Skills Acquired.</p>
               </div>
             </div>
             <div class="fan-card" style="--rotation: 5deg; --translation: 30px; --z-index: 4;">
-              <div class="fan-card-img" style="background-image: url('./assets/bw_portrait.png');"></div>
+              <div class="fan-card-img" style="background-image: url('./assets/wasteWarriors/wwTeam.jpg');"></div>
               <div class="fan-card-text">
-                <h4>Educational</h4>
-                <p>Video content editing.</p>
+                <h4>Team</h4>
+                <p>The Awesone Team.</p>
               </div>
             </div>
             <div class="fan-card" style="--rotation: 15deg; --translation: 90px; --z-index: 5;">
               <div class="fan-card-img"
-                style="background-image: url('./assets/3d_icon_education.png'); background-size: auto 60%; background-repeat: no-repeat;">
+                style="background-image: url('./assets/wasteWarriors/certificate.jpg'); background-size: auto 60%; background-repeat: no-repeat;">
               </div>
               <div class="fan-card-text">
                 <h4>Certificate</h4>
@@ -315,11 +316,125 @@
             </div>
             <div class="fan-card" style="--rotation: 25deg; --translation: 150px; --z-index: 6;">
               <div class="fan-card-img"
-                style="background-image: url('./assets/3d_icon_experience.png'); background-size: auto 60%; background-repeat: no-repeat;">
+                style="background-image: url('./assets/wasteWarriors/internshipLetter.jpg'); background-size: auto 60%; background-repeat: no-repeat;">
               </div>
               <div class="fan-card-text">
                 <h4>Letter</h4>
                 <p>Recommendation letter.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Project 1 Modal -->
+    <div id="project1-modal" class="modal-overlay">
+      <div class="modal-content glass-panel">
+        <span class="close-modal" onclick="closeModal('project1-modal')">&times;</span>
+        <div class="modal-header">
+          <h3 class="modal-title">Project One</h3>
+          <p class="modal-subtitle">Web Application • Full Stack</p>
+        </div>
+        <div class="modal-body">
+          <p class="modal-desc">Detailed overview of Project One. Here you can describe the core functionalities, tech
+            stack, and your specific role in building this application. Highlighting key challenges and how you overcame
+            them adds great value.</p>
+          <div class="card-fan-container">
+            <div class="fan-card" style="--rotation: -15deg; --translation: -90px; --z-index: 1;">
+              <div class="fan-card-img" style="background-image: url('./assets/project1.png');"></div>
+              <div class="fan-card-text">
+                <h4>Feature 1</h4>
+                <p>Key feature description.</p>
+              </div>
+            </div>
+            <div class="fan-card" style="--rotation: 0deg; --translation: 0px; --z-index: 2;">
+              <div class="fan-card-img" style="background-image: url('./assets/project1.png');"></div>
+              <div class="fan-card-text">
+                <h4>Feature 2</h4>
+                <p>Key feature description.</p>
+              </div>
+            </div>
+            <div class="fan-card" style="--rotation: 15deg; --translation: 90px; --z-index: 3;">
+              <div class="fan-card-img" style="background-image: url('./assets/project1.png');"></div>
+              <div class="fan-card-text">
+                <h4>Feature 3</h4>
+                <p>Key feature description.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 2 Modal -->
+    <div id="project2-modal" class="modal-overlay">
+      <div class="modal-content glass-panel">
+        <span class="close-modal" onclick="closeModal('project2-modal')">&times;</span>
+        <div class="modal-header">
+          <h3 class="modal-title">Project Two</h3>
+          <p class="modal-subtitle">Cybersecurity Tool • Python</p>
+        </div>
+        <div class="modal-body">
+          <p class="modal-desc">Detailed overview of Project Two. Focus on the security aspects, network engineering
+            principles applied, or vulnerabilities addressed through this project.</p>
+          <div class="card-fan-container">
+            <div class="fan-card" style="--rotation: -15deg; --translation: -90px; --z-index: 1;">
+              <div class="fan-card-img" style="background-image: url('./assets/iso_pj_2.png');"></div>
+              <div class="fan-card-text">
+                <h4>Feature 1</h4>
+                <p>Key feature description.</p>
+              </div>
+            </div>
+            <div class="fan-card" style="--rotation: 0deg; --translation: 0px; --z-index: 2;">
+              <div class="fan-card-img" style="background-image: url('./assets/iso_pj_2.png');"></div>
+              <div class="fan-card-text">
+                <h4>Feature 2</h4>
+                <p>Key feature description.</p>
+              </div>
+            </div>
+            <div class="fan-card" style="--rotation: 15deg; --translation: 90px; --z-index: 3;">
+              <div class="fan-card-img" style="background-image: url('./assets/iso_pj_2.png');"></div>
+              <div class="fan-card-text">
+                <h4>Feature 3</h4>
+                <p>Key feature description.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 3 Modal -->
+    <div id="project3-modal" class="modal-overlay">
+      <div class="modal-content glass-panel">
+        <span class="close-modal" onclick="closeModal('project3-modal')">&times;</span>
+        <div class="modal-header">
+          <h3 class="modal-title">Project Three</h3>
+          <p class="modal-subtitle">Network Architecture • Infrastructure</p>
+        </div>
+        <div class="modal-body">
+          <p class="modal-desc">Detailed overview of Project Three. Explain the scope of the network architecture, the
+            protocols implemented, and the overall impact on system reliability and performance.</p>
+          <div class="card-fan-container">
+            <div class="fan-card" style="--rotation: -15deg; --translation: -90px; --z-index: 1;">
+              <div class="fan-card-img" style="background-image: url('./assets/iso_pj_3.png');"></div>
+              <div class="fan-card-text">
+                <h4>Feature 1</h4>
+                <p>Key feature description.</p>
+              </div>
+            </div>
+            <div class="fan-card" style="--rotation: 0deg; --translation: 0px; --z-index: 2;">
+              <div class="fan-card-img" style="background-image: url('./assets/iso_pj_3.png');"></div>
+              <div class="fan-card-text">
+                <h4>Feature 2</h4>
+                <p>Key feature description.</p>
+              </div>
+            </div>
+            <div class="fan-card" style="--rotation: 15deg; --translation: 90px; --z-index: 3;">
+              <div class="fan-card-img" style="background-image: url('./assets/iso_pj_3.png');"></div>
+              <div class="fan-card-text">
+                <h4>Feature 3</h4>
+                <p>Key feature description.</p>
               </div>
             </div>
           </div>
