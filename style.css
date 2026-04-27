@@ -308,7 +308,10 @@ section {
 }
 
 .hero-main-img {
-  max-width: 250px;
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  object-position: top center;
   margin-top: 3rem;
   border-radius: 50%;
   border: 1px solid rgba(0,0,0,0.02);
