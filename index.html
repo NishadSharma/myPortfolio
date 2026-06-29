@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>myPortfolio</title>
+    <meta name="description" content="Portfolio of Nishad - Designer, Developer, and Content Creator. Exploring code, philosophy, and psychology.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <!-- Remix Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="portfolio-container">
+        <!-- Floating Header (Decorative & Theme Switch wrapper) -->
+        <header class="portfolio-header">
+            <div class="header-logo">
+                <span class="logo-dot"></span>
+                <span class="logo-text">myPortfolio</span>
+            </div>
+        </header>
+
+        <main class="portfolio-content">
+            <!-- 1. HERO SECTION -->
+            <section class="portfolio-card hero-card" id="hero">
+                <div class="hero-top">
+                    <div class="avatar-container">
+                        <img src="assets/avatar.png" alt="Nishad's Avatar" class="avatar-image">
+                    </div>
+                    <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle Theme">
+                        <i class="ri-moon-line theme-icon-dark"></i>
+                        <i class="ri-sun-line theme-icon-light" style="display: none;"></i>
+                    </button>
+                </div>
+                <div class="hero-body">
+                    <h1 class="hero-title">Hey, I'm Nishad</h1>
+                    <p class="hero-subtitle">Software Engineer &amp; Designer</p>
+                    <a href="assets/resume.pdf" class="btn btn-outline download-resume-btn" download>
+                        Download resume <i class="ri-download-line"></i>
+                    </a>
+                </div>
+                <div class="hero-footer">
+                    <a href="mailto:nishadsharma01@gmail.com" class="social-email">
+                        <i class="ri-mail-line"></i> nishadsharma01@gmail.com
+                    </a>
+                    <div class="social-links">
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                            <i class="ri-instagram-line"></i>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                            <i class="ri-linkedin-fill"></i>
+                        </a>
+                        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter/X">
+                            <i class="ri-twitter-x-line"></i>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 2. INTRO SECTION -->
+            <section class="portfolio-card intro-card" id="intro">
+                <span class="card-label">INTRO</span>
+                <p class="intro-text">
+                    I wear many hats — design, code, content — and enjoy making ideas real, whatever it takes. With reading books related to philosophy and psychology as a part-time interest.
+                </p>
+            </section>
+
+            <!-- 3. PROJECTS SECTION -->
+            <section class="portfolio-card projects-card" id="projects">
+                <span class="card-label">PROJECTS</span>
+                
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <div class="project-item">
+                        <div class="project-image-wrapper">
+                            <img src="assets/smartbus.png" alt="smartBus Project" class="project-image">
+                        </div>
+                        <div class="project-details">
+                            <h3 class="project-title">smartBus</h3>
+                            <h4 class="project-tagline">Real-Time Public Transit Tracking Web Application</h4>
+                            <p class="project-description">
+                                A web-based platform for real-time public transport tracking and basic ETA estimation using secure APIs and interactive portals (admin, driver &amp; dashboard).
+                            </p>
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="ri-github-line"></i> Code</a>
+                                <a href="#" class="project-link"><i class="ri-external-link-line"></i> Live Demo</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 (Added for premium richness) -->
+                    <div class="project-item">
+                        <div class="project-image-wrapper">
+                            <div class="project-image-placeholder">
+                                <i class="ri-brain-line placeholder-icon"></i>
+                            </div>
+                        </div>
+                        <div class="project-details">
+                            <h3 class="project-title">mindSpace</h3>
+                            <h4 class="project-tagline">Psychology Journaling &amp; Cognitive Fitness Platform</h4>
+                            <p class="project-description">
+                                An interactive journaling application incorporating basic cognitive exercises, mood tracking graphs, and philosophical quote reminders to promote mental wellbeing.
+                            </p>
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="ri-github-line"></i> Code</a>
+                                <a href="#" class="project-link"><i class="ri-external-link-line"></i> Live Demo</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 4. RECOMMENDATIONS SECTION -->
+            <section class="portfolio-card recommendations-card" id="recommendations">
+                <div class="card-header-with-actions">
+                    <span class="card-label">RECOMMENDATIONS</span>
+                    <button class="add-testimonial-btn" id="open-testimonial-modal" aria-label="Add Recommendation">
+                        <i class="ri-add-line"></i> Add Testimonial
+                    </button>
+                </div>
+
+                <div class="recommendations-container" id="recommendations-container">
+                    <!-- Default Empty State -->
+                    <div class="empty-state" id="recommendations-empty">
+                        <div class="empty-icon-wrapper">
+                            <i class="ri-chat-3-line"></i>
+                        </div>
+                        <h4 class="empty-title">No recommendations yet</h4>
+                        <p class="empty-desc">Add recommendations to build trust and credibility.</p>
+                        <button class="btn btn-outline" id="empty-state-add-btn">Add Testimonial</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. STACK SECTION -->
+            <section class="portfolio-card stack-card" id="stack">
+                <span class="card-label">STACK</span>
+                <div class="stack-grid">
+                    <div class="stack-item" data-tooltip="Figma">
+                        <i class="ri-figma-fill"></i>
+                        <span>Figma</span>
+                    </div>
+                    <div class="stack-item" data-tooltip="VS Code">
+                        <i class="ri-code-line"></i>
+                        <span>VS Code</span>
+                    </div>
+                    <div class="stack-item" data-tooltip="GitHub">
+                        <i class="ri-github-fill"></i>
+                        <span>GitHub</span>
+                    </div>
+                    <div class="stack-item" data-tooltip="Canva">
+                        <i class="ri-palette-line"></i>
+                        <span>Canva</span>
+                    </div>
+                    <div class="stack-item" data-tooltip="HTML5">
+                        <i class="ri-html5-fill"></i>
+                        <span>HTML5</span>
+                    </div>
+                    <div class="stack-item" data-tooltip="CSS3">
+                        <i class="ri-css3-fill"></i>
+                        <span>CSS3</span>
+                    </div>
+                    <div class="stack-item" data-tooltip="JavaScript">
+                        <i class="ri-javascript-fill"></i>
+                        <span>JavaScript</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 6. MY STORY SECTION (Interactive Draggable Photo Cards) -->
+            <section class="portfolio-card story-card" id="story">
+                <span class="card-label">MY STORY</span>
+                
+                <div class="story-interactive-wrapper">
+                    <!-- Instructions for interaction -->
+                    <span class="drag-hint"><i class="ri-hand-coin-line"></i> TRY MOVING THINGS AROUND :)</span>
+                    
+                    <!-- Draggable Stack Canvas -->
+                    <div class="photo-stack" id="photo-stack">
+                        <div class="photo-frame draggable-card" style="--rotation: -6deg; --x: -20px; --y: 5px; z-index: 3;">
+                            <img src="assets/story1.png" alt="Graduation Card" draggable="false">
+                            <span class="frame-label">Graduation CSE</span>
+                        </div>
+                        <div class="photo-frame draggable-card" style="--rotation: 4deg; --x: 15px; --y: -10px; z-index: 2;">
+                            <img src="assets/story2.png" alt="Coding Workspace Card" draggable="false">
+                            <span class="frame-label">Coding Ideas</span>
+                        </div>
+                        <div class="photo-frame draggable-card" style="--rotation: -2deg; --x: -5px; --y: -25px; z-index: 1;">
+                            <img src="assets/story3.png" alt="Reading/Books Card" draggable="false">
+                            <span class="frame-label">Philosophy &amp; Mind</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="story-text-container">
+                    <p class="story-desc collapsed" id="story-desc">
+                        My name is Nishad and I recently completed my graduation in Computer Science and Engineering from Lovely Professional University. I am a simple and self-motivated person who believes in learning from life's experiences and people around me. I wear many hats — design, code, content — and enjoy making ideas real, whatever it takes. Reading books related to philosophy and psychology is a part-time interest that keeps me inspired and updates my outlook on product design and human-centric engineering.
+                    </p>
+                    <button class="view-more-btn" id="story-toggle-btn">
+                        <span>View more</span> <i class="ri-arrow-down-s-line"></i>
+                    </button>
+                </div>
+            </section>
+
+            <!-- 7. EXPERIENCE SECTION -->
+            <section class="portfolio-card experience-card" id="experience">
+                <span class="card-label">EXPERIENCE</span>
+                <div class="experience-timeline">
+                    <div class="experience-item">
+                        <div class="exp-left">
+                            <span class="exp-year">+ 2023</span>
+                            <span class="exp-company">WASTE WARRIORS SOCIETY</span>
+                        </div>
+                        <div class="exp-right">
+                            <span class="exp-role">VOLUNTEER</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 8. CONTACT BUTTONS SECTION -->
+            <section class="contact-grid-section" id="contact">
+                <div class="contact-grid">
+                    <!-- Copy Email Button -->
+                    <button class="contact-btn copy-btn" data-copy="nishadsharma01@gmail.com" aria-label="Copy Email">
+                        <div class="btn-content">
+                            <span class="btn-title">Copy mail</span>
+                            <i class="ri-mail-line btn-icon"></i>
+                        </div>
+                        <span class="tooltip-text">Copy to clipboard</span>
+                    </button>
+
+                    <!-- Copy Phone Button -->
+                    <button class="contact-btn copy-btn" data-copy="+91 9876543210" aria-label="Copy Phone">
+                        <div class="btn-content">
+                            <span class="btn-title">Copy phone</span>
+                            <i class="ri-phone-line btn-icon"></i>
+                        </div>
+                        <span class="tooltip-text">Copy to clipboard</span>
+                    </button>
+
+                    <!-- LinkedIn Link -->
+                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="contact-btn link-btn" aria-label="LinkedIn Profile">
+                        <div class="btn-content">
+                            <span class="btn-title">Linkedin</span>
+                            <i class="ri-linkedin-box-line btn-icon"></i>
+                        </div>
+                    </a>
+
+                    <!-- Twitter Link -->
+                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="contact-btn link-btn" aria-label="X Profile">
+                        <div class="btn-content">
+                            <span class="btn-title">X</span>
+                            <i class="ri-twitter-x-line btn-icon"></i>
+                        </div>
+                    </a>
+
+                    <!-- Resume Link -->
+                    <a href="assets/resume.pdf" target="_blank" class="contact-btn link-btn" aria-label="View Resume">
+                        <div class="btn-content">
+                            <span class="btn-title">Resume</span>
+                            <i class="ri-file-text-line btn-icon"></i>
+                        </div>
+                    </a>
+                </div>
+            </section>
+        </main>
+        
+        <footer class="portfolio-footer-bottom">
+            <p>&copy; 2026 Nishad. Built from scratch.</p>
+        </footer>
+    </div>
+
+    <!-- Testimonial Modal Dialog -->
+    <div class="modal" id="testimonial-modal">
+        <div class="modal-content">
+            <button class="close-modal-btn" id="close-testimonial-modal" aria-label="Close Modal">
+                <i class="ri-close-line"></i>
+            </button>
+            <h3 class="modal-title">Add Recommendation</h3>
+            <form id="testimonial-form">
+                <div class="form-group">
+                    <label for="testimonial-name">Name</label>
+                    <input type="text" id="testimonial-name" required placeholder="e.g. Jane Doe">
+                </div>
+                <div class="form-group">
+                    <label for="testimonial-role">Role / Company</label>
+                    <input type="text" id="testimonial-role" required placeholder="e.g. Lead Designer at Figma">
+                </div>
+                <div class="form-group">
+                    <label for="testimonial-text">Recommendation</label>
+                    <textarea id="testimonial-text" rows="4" required placeholder="Write a short recommendation..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary submit-btn">Submit Recommendation</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Main JavaScript Logic -->
+    <script src="app.js"></script>
+</body>
+</html>
