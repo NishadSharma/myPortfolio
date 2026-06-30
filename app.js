@@ -21,8 +21,8 @@ function updateThemeIcons(theme) {
 // Initialize Theme from localStorage or system preference
 function initTheme() {
     const savedTheme = localStorage.getItem('portfolio-theme');
-    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    const initialTheme = savedTheme || (systemPrefersDark ? 'dark' : 'light');
+    // Default to dark theme if no preference is saved
+    const initialTheme = savedTheme || 'dark';
     
     htmlElement.setAttribute('data-theme', initialTheme);
     updateThemeIcons(initialTheme);
@@ -93,7 +93,56 @@ copyButtons.forEach(button => {
 });
 
 // ==========================================================================
-// 4. RECOMMENDATIONS (TESTIMONIALS MANAGER)
+// 4. INTERACTIVE TIMELINE (EXPERIENCE WORKFLOW)
+// ==========================================================================
+
+const timelineTabs = document.querySelectorAll('.timeline-tab');
+const timelinePanels = document.querySelectorAll('.timeline-panel');
+
+timelineTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+        // Remove active state from all tabs and hide panels
+        timelineTabs.forEach(t => {
+            t.classList.remove('active');
+            t.setAttribute('aria-selected', 'false');
+        });
+        
+        timelinePanels.forEach(p => {
+            p.classList.remove('active');
+        });
+        
+        // Activate clicked tab
+        tab.classList.add('active');
+        tab.setAttribute('aria-selected', 'true');
+        
+        // Show corresponding panel
+        const targetPanelId = tab.getAttribute('aria-controls');
+        const targetPanel = document.getElementById(targetPanelId);
+        if (targetPanel) {
+            targetPanel.classList.add('active');
+        }
+    });
+});
+
+// ==========================================================================
+// 5. BENTO CARD MOUSE TRACKING GLOW
+// ==========================================================================
+
+const bentoCards = document.querySelectorAll('.portfolio-card');
+
+bentoCards.forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        
+        card.style.setProperty('--mouse-x', `${x}px`);
+        card.style.setProperty('--mouse-y', `${y}px`);
+    });
+});
+
+// ==========================================================================
+// 6. RECOMMENDATIONS (TESTIMONIALS MANAGER)
 // ==========================================================================
 
 const recommendationsContainer = document.getElementById('recommendations-container');
@@ -123,16 +172,23 @@ function saveTestimonials() {
 
 // Render recommendations
 function renderTestimonials() {
+    // We already have preloaded items in index.html.
+    // User-submitted items will be added inside an active list at the end.
+    let list = recommendationsContainer.querySelector('.testimonial-list');
+    
     if (testimonials.length === 0) {
-        recommendationsEmpty.style.display = 'flex';
-        // Remove list if it exists
-        const existingList = recommendationsContainer.querySelector('.testimonial-list');
-        if (existingList) existingList.remove();
+        if (list) list.remove();
+        // Check if preloaded list also doesn't exist (e.g. if we chose to hide it)
+        const preloaded = recommendationsContainer.querySelector('.preloaded-recommendations-list');
+        if (!preloaded) {
+            recommendationsEmpty.style.display = 'flex';
+        } else {
+            recommendationsEmpty.style.display = 'none';
+        }
     } else {
         recommendationsEmpty.style.display = 'none';
         
         // Create or clear list
-        let list = recommendationsContainer.querySelector('.testimonial-list');
         if (!list) {
             list = document.createElement('div');
             list.className = 'testimonial-list';
@@ -144,11 +200,18 @@ function renderTestimonials() {
         testimonials.forEach(t => {
             const item = document.createElement('div');
             item.className = 'testimonial-item';
+            
+            // Get initial/first letter for user avatar
+            const firstLetter = t.name ? t.name.charAt(0).toUpperCase() : 'U';
+            
             item.innerHTML = `
                 <p class="testimonial-text">"${escapeHTML(t.text)}"</p>
                 <div class="testimonial-author">
-                    <span class="testimonial-name">${escapeHTML(t.name)}</span>
-                    <span class="testimonial-role">${escapeHTML(t.role)}</span>
+                    <div class="testimonial-author-avatar">${escapeHTML(firstLetter)}</div>
+                    <div class="testimonial-meta">
+                        <span class="testimonial-name">${escapeHTML(t.name)}</span>
+                        <span class="testimonial-role">${escapeHTML(t.role)}</span>
+                    </div>
                 </div>
             `;
             list.appendChild(item);
@@ -181,9 +244,9 @@ function toggleModal(show) {
     }
 }
 
-openModalBtn.addEventListener('click', () => toggleModal(true));
+if (openModalBtn) openModalBtn.addEventListener('click', () => toggleModal(true));
 if (emptyAddBtn) emptyAddBtn.addEventListener('click', () => toggleModal(true));
-closeModalBtn.addEventListener('click', () => toggleModal(false));
+if (closeModalBtn) closeModalBtn.addEventListener('click', () => toggleModal(false));
 
 // Close modal when clicking background overlay
 testimonialModal.addEventListener('click', (e) => {
@@ -209,7 +272,7 @@ testimonialForm.addEventListener('submit', (e) => {
 });
 
 // ==========================================================================
-// 5. DRAGGABLE & INFINITE-CYCLING PHOTO STACK
+// 7. DRAGGABLE & INFINITE-CYCLING PHOTO STACK
 // ==========================================================================
 
 const photoStack = document.getElementById('photo-stack');
