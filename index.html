@@ -33,7 +33,7 @@
                 <div class="hero-top">
                     <div class="profile-info-block">
                         <div class="avatar-container">
-                            <img src="assets/avatar.png" alt="Nishad's Avatar" class="avatar-image">
+                            <img src="assets/avatar.jpg" alt="Nishad's Avatar" class="avatar-image">
                         </div>
                         <div class="profile-text-block">
                             <h2 class="profile-name">Nishad</h2>
@@ -264,11 +264,25 @@
                         <li>Completed lab rooms across Web Exploitation, Networking, Malware, and Digital Forensics.
                         </li>
                     </ul>
+                    <div class="patent-block">
+                        <div class="thm-header">
+                            <i class="ri-lightbulb-line thm-icon"></i>
+                            <h4 class="achievements-title">Patent Filed</h4>
+                            <span class="achievements-date">Feb 2026</span>
+                        </div>
+                        <h5 class="patent-title">Real-Time Public Transport Tracking System for Small Cities</h5>
+                        <span class="patent-number">No: 202611019879</span>
+                        <p class="patent-desc">
+                            The invention proposes smartBus, a multilingual web-based system that provides real-time
+                            tracking of public buses using GPS data from smartphones or low-cost devices, delivering
+                            live location, ETA predictions, and route info for low-bandwidth environments.
+                        </p>
+                    </div>
                 </div>
             </section>
 
             <!-- 7. CERTIFICATES CARD -->
-            <section class="portfolio-card certificates-card bento-col-2" id="certificates">
+            <section class="portfolio-card certificates-card bento-col-3" id="certificates">
                 <span class="card-label">CERTIFICATES</span>
                 <div class="certificates-grid-layout">
                     <div class="cert-item">
@@ -299,6 +313,41 @@
                             <p class="cert-issuer">Udemy • Dec 2023</p>
                         </div>
                     </div>
+                </div>
+            </section>
+
+            <!-- STORY CARD -->
+            <section class="portfolio-card story-card bento-col-2" id="story">
+                <span class="card-label">BIOGRAPHY</span>
+                
+                <div class="story-interactive-wrapper">
+                    <!-- Instructions for interaction -->
+                    <span class="drag-hint"><i class="ri-hand-coin-line"></i> FLING THE CARDS TO REVEAL STORY</span>
+                    
+                    <!-- Draggable Stack Canvas -->
+                    <div class="photo-stack" id="photo-stack">
+                        <div class="photo-frame draggable-card" style="--rotation: -6deg; --x: -20px; --y: 5px; z-index: 3;">
+                            <img src="assets/story1.png" alt="LPU CSE Graduation" draggable="false">
+                            <span class="frame-label">Lovely Professional Univ</span>
+                        </div>
+                        <div class="photo-frame draggable-card" style="--rotation: 4deg; --x: 15px; --y: -10px; z-index: 2;">
+                            <img src="assets/story2.png" alt="Cyber Security Labs" draggable="false">
+                            <span class="frame-label">TryHackMe Labs</span>
+                        </div>
+                        <div class="photo-frame draggable-card" style="--rotation: -2deg; --x: -5px; --y: -25px; z-index: 1;">
+                            <img src="assets/story3.png" alt="Waste Warriors volunteer work" draggable="false">
+                            <span class="frame-label">Waste Warriors Volunteer</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="story-text-container">
+                    <p class="story-desc collapsed" id="story-desc">
+                        My name is Nishad Sharma. I am a Computer Science &amp; Engineering graduate from Lovely Professional University with a deep focus on cybersecurity, penetration testing, and software development. I wear multiple hats—engineering secure code, conducting network vulnerability scans, and designing platforms like smartBus. In addition to technical work, I have a passion for community volunteering (like my work with the Waste Warriors Society in Dharamshala) and digital media editing. I believe secure software should also have clean usability and design.
+                    </p>
+                    <button class="view-more-btn" id="story-toggle-btn">
+                        <span>View more</span> <i class="ri-arrow-down-s-line"></i>
+                    </button>
                 </div>
             </section>
 
