@@ -1,19 +1,24 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nishad Sharma | Cybersecurity &amp; Software Engineer</title>
-    <meta name="description" content="Portfolio of Nishad Sharma - Cybersecurity and Software Engineer. Graduate of Lovely Professional University. Specializing in secure systems, networks, and full-stack development.">
+    <meta name="description"
+        content="Portfolio of Nishad Sharma - Cybersecurity and Software Engineer. Graduate of Lovely Professional University. Specializing in secure systems, networks, and full-stack development.">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
     <!-- Remix Icons -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
     <!-- Main Stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <!-- Glow Background Effects -->
     <div class="ambient-glow bg-glow-1"></div>
@@ -34,7 +39,7 @@
 
         <!-- Bento Layout Grid -->
         <main class="portfolio-content bento-grid">
-            
+
             <!-- 1. HERO CARD -->
             <section class="portfolio-card hero-card bento-col-2" id="hero">
                 <div class="hero-top">
@@ -53,13 +58,11 @@
                         <span class="tech-tag tag-apple"><i class="ri-global-line"></i> TryHackMe Top 5%</span>
                     </div>
                     <h1 class="hero-title">I engineer secure, performant software systems.</h1>
-                    <p class="hero-subtitle">Software Engineer and Security Enthusiast. Specializing in threat modeling, vulnerability assessments, full-stack React/Node developments, and cryptographic tools.</p>
+                    <p class="hero-subtitle">Software Engineer and Security Enthusiast. Specializing in secure
+                        architectures, penetration testing, full-stack React/Node developments, and threat analysis.</p>
                     <div class="hero-actions">
                         <a href="assets/resume.pdf" class="btn btn-outline download-resume-btn" download>
-                            Download Resume <i class="ri-arrow-right-up-line"></i>
-                        </a>
-                        <a href="#contact" class="btn btn-primary">
-                            Get in Touch <i class="ri-chat-3-line"></i>
+                            Download CV <i class="ri-arrow-right-up-line"></i>
                         </a>
                     </div>
                 </div>
@@ -68,118 +71,50 @@
                         <i class="ri-mail-line"></i> nishadsharma01@gmail.com
                     </a>
                     <div class="social-links">
-                        <a href="https://linkedin.com/in/nishad-sharma" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <a href="https://linkedin.com/in/nishad-sharma" target="_blank" rel="noopener noreferrer"
+                            aria-label="LinkedIn">
                             <i class="ri-linkedin-fill"></i>
                         </a>
-                        <a href="https://github.com/NishadSharma" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                        <a href="https://github.com/NishadSharma" target="_blank" rel="noopener noreferrer"
+                            aria-label="GitHub">
                             <i class="ri-github-line"></i>
                         </a>
                     </div>
                 </div>
             </section>
 
-            <!-- 2. INTRO CARD -->
-            <section class="portfolio-card intro-card bento-col-1" id="intro">
-                <span class="card-label">PHILOSOPHY</span>
-                <h3 class="intro-heading">Security by Design</h3>
-                <p class="intro-text">
-                    I believe security is not an afterthought but a foundational layer. From government-grade APIs to steganographic systems, I develop software that is secure from the very first commit.
-                </p>
-                <div class="philosophy-footer">
-                    <span class="mono-stat">OWASP TOP 10</span>
-                    <span class="mono-stat">ISO 27001</span>
-                </div>
-            </section>
-
-            <!-- 3. INTERACTIVE TIMELINE CARD -->
-            <section class="portfolio-card timeline-card bento-col-3" id="timeline">
-                <span class="card-label">BACKGROUND WORKFLOW</span>
-                <div class="timeline-container">
-                    <!-- Tabs -->
-                    <div class="timeline-tabs" role="tablist">
-                        <button class="timeline-tab active" id="tab-education" role="tab" aria-selected="true" aria-controls="pane-education">
-                            <i class="ri-graduation-cap-line"></i> Education
-                        </button>
-                        <button class="timeline-tab" id="tab-certifications" role="tab" aria-selected="false" aria-controls="pane-certifications">
-                            <i class="ri-verified-badge-line"></i> Certificates
-                        </button>
-                        <button class="timeline-tab" id="tab-achievements" role="tab" aria-selected="false" aria-controls="pane-achievements">
-                            <i class="ri-trophy-line"></i> Achievements
-                        </button>
+            <!-- 2. SKILL & TOOLKIT -->
+            <section class="portfolio-card stack-card bento-col-1" id="stack">
+                <span class="card-label">SKILL &amp; TOOLKIT</span>
+                <div class="skills-block">
+                    <div class="skill-group">
+                        <h4 class="skill-group-title">Languages</h4>
+                        <p class="skill-group-items">C, Python, Bash Scripting, SQL</p>
                     </div>
-
-                    <!-- Panels -->
-                    <div class="timeline-panels">
-                        <!-- Education Panel -->
-                        <div class="timeline-panel active" id="pane-education" role="tabpanel" aria-labelledby="tab-education">
-                            <div class="panel-header">
-                                <h3 class="role-title">Lovely Professional University</h3>
-                                <span class="role-duration">B.Tech in Computer Science and Engineering | Sept 2022 — June 2026 (Phagwara, Punjab)</span>
-                            </div>
-                            <p class="role-desc">Acquired core computer science foundations, algorithm architectures, database systems, and secure coding methodologies.</p>
-                            <ul class="role-bullets">
-                                <li>Academic Standing: Cumulative Grade Point Average (CGPA) of 7.44.</li>
-                                <li>Specialized courses in computer networks, operating systems, and database management.</li>
-                            </ul>
-                            
-                            <div class="panel-header" style="margin-top: 15px;">
-                                <h3 class="role-title">Kendriya Vidyalaya</h3>
-                                <span class="role-duration">Dharamshala, Himachal Pradesh</span>
-                            </div>
-                            <ul class="role-bullets">
-                                <li><strong>Intermediate (Class XII):</strong> Completed April 2021 — March 2022. Final Score: 65%</li>
-                                <li><strong>Matriculation (Class X):</strong> Completed April 2019 — March 2020. Final Score: 81%</li>
-                            </ul>
-                        </div>
-
-                        <!-- Certifications Panel -->
-                        <div class="timeline-panel" id="pane-certifications" role="tabpanel" aria-labelledby="tab-certifications">
-                            <div class="panel-header">
-                                <h3 class="role-title">Professional Security &amp; Systems Credentials</h3>
-                                <span class="role-duration">Industry-recognized program completion</span>
-                            </div>
-                            <p class="role-desc">Continuous training and certification to keep up-to-date with standard industry methodologies and frameworks.</p>
-                            <ul class="role-bullets">
-                                <li><strong>Cyber Security 101</strong> (TryHackMe) — Completed August 2025</li>
-                                <li><strong>Cloud Computing</strong> (NPTEL Swayam) — Completed October 2024</li>
-                                <li><strong>Master Java Programming</strong> (GeeksForGeeks) — Completed April 2024</li>
-                                <li><strong>Mastering Data Structures using C &amp; C++</strong> (Udemy) — Completed December 2023</li>
-                            </ul>
-                            <div class="pane-tags">
-                                <span class="pane-tag">Cyber Security</span>
-                                <span class="pane-tag">Java</span>
-                                <span class="pane-tag">Data Structures</span>
-                                <span class="pane-tag">Cloud</span>
-                            </div>
-                        </div>
-
-                        <!-- Achievements Panel -->
-                        <div class="timeline-panel" id="pane-achievements" role="tabpanel" aria-labelledby="tab-achievements">
-                            <div class="panel-header">
-                                <h3 class="role-title">Security Rankings &amp; Community Contributions</h3>
-                                <span class="role-duration">TryHackMe &amp; Extracurricular Leadership</span>
-                            </div>
-                            <p class="role-desc">Applying skills dynamically in active community competitions and environment sustainability groups.</p>
-                            <ul class="role-bullets">
-                                <li><strong>TryHackMe Rank:</strong> Secured a Global Rank in the Top 5% as of August 2025.</li>
-                                <li>Completed 80+ dynamic lab rooms covering Web Exploitation, Networking, Malware Analysis, and Digital Forensics.</li>
-                                <li>Earned 17 verified badges for hands-on, scenario-based security investigations.</li>
-                                <li><strong>Waste Warriors Society (Volunteer):</strong> Contributed to sustainable waste management programs in Dharamshala (July 2023). Assisted with community outreach, data collection, and edited educational video presentations.</li>
-                            </ul>
-                        </div>
+                    <div class="skill-group">
+                        <h4 class="skill-group-title">Frameworks</h4>
+                        <p class="skill-group-items">ISO/IEC 27001, OWASP Top 10</p>
+                    </div>
+                    <div class="skill-group">
+                        <h4 class="skill-group-title">Tools &amp; Tech</h4>
+                        <p class="skill-group-items">Git &amp; GitHub, VS Code, Wireshark, Nmap, Burp Suite</p>
+                    </div>
+                    <div class="skill-group">
+                        <h4 class="skill-group-title">Platforms</h4>
+                        <p class="skill-group-items">Linux, Windows, FlareVM, VMware Workstation</p>
                     </div>
                 </div>
             </section>
 
-            <!-- 4. PROJECTS SECTION -->
+            <!-- 3. PROJECTS SECTION -->
             <section class="portfolio-card projects-card bento-col-3" id="projects">
-                <span class="card-label">ACADEMIC &amp; SECURITY PROJECTS</span>
-                
+                <span class="card-label">PROJECTS</span>
+
                 <div class="projects-grid">
                     <!-- Project 1 -->
                     <div class="project-item">
                         <div class="project-image-wrapper">
-                            <img src="assets/smartbus.png" alt="smartBus Project" class="project-image">
+                            <img src="assets/smartBus.jpg" alt="smartBus Project" class="project-image">
                             <div class="project-hover-glow"></div>
                         </div>
                         <div class="project-details">
@@ -189,7 +124,9 @@
                             </div>
                             <h4 class="project-tagline">Real-Time Public Transport Tracking Platform</h4>
                             <p class="project-description">
-                                A web-based platform for real-time bus tracking and basic ETA estimation using secure APIs and interactive maps. Built with a government-grade UI, role-based access controls, and scalable backend architecture to simulate intelligent transit systems.
+                                A web-based platform for real-time bus tracking and basic ETA estimation using secure
+                                APIs and interactive maps. Built with a government-grade UI, role-based access controls,
+                                and scalable backend architecture to simulate intelligent transit systems.
                             </p>
                             <div class="project-tags-row">
                                 <span>React + Vite</span>
@@ -199,8 +136,8 @@
                                 <span>Express</span>
                             </div>
                             <div class="project-links">
-                                <a href="https://github.com/NishadSharma" class="project-link"><i class="ri-github-line"></i> Code</a>
-                                <a href="#" class="project-link"><i class="ri-external-link-line"></i> Live Demo</a>
+                                <a href="https://github.com/NishadSharma" class="project-link"><i
+                                        class="ri-github-line"></i> Code</a>
                             </div>
                         </div>
                     </div>
@@ -213,12 +150,14 @@
                         </div>
                         <div class="project-details">
                             <div class="project-meta-row">
-                                <h3 class="project-title">Image Steganography</h3>
+                                <h3 class="project-title">Secure Image Steganography</h3>
                                 <span class="tech-tag tag-google-small">Aug 2025</span>
                             </div>
-                            <h4 class="project-tagline">Secure LSB Stego &amp; Encryption System</h4>
+                            <h4 class="project-tagline">AES-256 Encrypted LSB Hiding System</h4>
                             <p class="project-description">
-                                Developed a secure communication utility combining robust AES-256 block encryption with LSB (Least Significant Bit) image data hiding. Implemented both functional GUI and modular CLI versions backed by comprehensive unit tests.
+                                Developed a secure communication utility combining robust AES-256 block encryption with
+                                LSB (Least Significant Bit) image data hiding. Implemented both functional GUI and
+                                modular CLI versions backed by comprehensive unit tests.
                             </p>
                             <div class="project-tags-row">
                                 <span>Python</span>
@@ -228,7 +167,8 @@
                                 <span>Pytest</span>
                             </div>
                             <div class="project-links">
-                                <a href="https://github.com/NishadSharma" class="project-link"><i class="ri-github-line"></i> Repository</a>
+                                <a href="https://github.com/NishadSharma" class="project-link"><i
+                                        class="ri-github-line"></i> Code</a>
                             </div>
                         </div>
                     </div>
@@ -241,240 +181,176 @@
                         </div>
                         <div class="project-details">
                             <div class="project-meta-row">
-                                <h3 class="project-title">Vulnerability Scanner</h3>
+                                <h3 class="project-title">Personal Vulnerability Scanner</h3>
                                 <span class="tech-tag tag-apple-small">Feb 2025</span>
                             </div>
                             <h4 class="project-tagline">Cross-Platform Security Audit &amp; Reporting Tool</h4>
                             <p class="project-description">
-                                Built a custom modular port scanner and vulnerability auditor designed to identify active network interfaces, discover running services, and map CVEs using the Vulners NSE engine. Outputs structured reports in TXT, CSV, and HTML formats.
+                                Built a custom modular port scanner and vulnerability auditor designed to identify
+                                active network interfaces, discover running services, and map CVEs using the Vulners NSE
+                                engine. Outputs structured reports in TXT, CSV, and HTML formats.
                             </p>
                             <div class="project-tags-row">
                                 <span>Python</span>
                                 <span>Nmap</span>
                                 <span>Vulners NSE</span>
-                                <span>Shell Scripting</span>
                             </div>
                             <div class="project-links">
-                                <a href="https://github.com/NishadSharma" class="project-link"><i class="ri-github-line"></i> Documentation</a>
+                                <a href="https://github.com/NishadSharma" class="project-link"><i
+                                        class="ri-github-line"></i> Code</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- 5. STACK & CAPABILITIES -->
-            <section class="portfolio-card stack-card bento-col-1" id="stack">
-                <span class="card-label">SKILL &amp; TOOLKIT</span>
-                <div class="stack-description">
-                    <p>Core programming languages, secure frameworks, platforms, and penetration testing auditing suites.</p>
-                </div>
-                <div class="stack-grid">
-                    <div class="stack-item" data-tooltip="Python">
-                        <i class="ri-code-line"></i>
-                        <span>Python</span>
+            <!-- 4. EDUCATION CARD -->
+            <section class="portfolio-card education-card bento-col-1" id="education">
+                <span class="card-label">EDUCATION</span>
+                <div class="vertical-timeline">
+                    <div class="timeline-box">
+                        <h4 class="timeline-title">Lovely Professional University</h4>
+                        <p class="timeline-subtitle">B.Tech - Computer Science &amp; Engineering</p>
+                        <span class="timeline-date">Sept 2022 — June 2026</span>
+                        <div class="timeline-details">CGPA: 7.44</div>
                     </div>
-                    <div class="stack-item" data-tooltip="C / C++">
-                        <i class="ri-terminal-line"></i>
-                        <span>C / C++</span>
+                    <div class="timeline-box">
+                        <h4 class="timeline-title">Kendriya Vidyalaya</h4>
+                        <p class="timeline-subtitle">Intermediate (Class XII)</p>
+                        <span class="timeline-date">Apr 2021 — Mar 2022</span>
+                        <div class="timeline-details">Percentage: 65%</div>
                     </div>
-                    <div class="stack-item" data-tooltip="Bash Shell">
-                        <i class="ri-command-line"></i>
-                        <span>Bash</span>
-                    </div>
-                    <div class="stack-item" data-tooltip="SQL Databases">
-                        <i class="ri-database-2-line"></i>
-                        <span>SQL</span>
-                    </div>
-                    <div class="stack-item" data-tooltip="Nmap Scanning">
-                        <i class="ri-shield-line"></i>
-                        <span>Nmap</span>
-                    </div>
-                    <div class="stack-item" data-tooltip="Wireshark Analysis">
-                        <i class="ri-router-line"></i>
-                        <span>Wireshark</span>
-                    </div>
-                    <div class="stack-item" data-tooltip="Linux Systems">
-                        <i class="ri-settings-5-line"></i>
-                        <span>Linux</span>
+                    <div class="timeline-box">
+                        <h4 class="timeline-title">Kendriya Vidyalaya</h4>
+                        <p class="timeline-subtitle">Matriculation (Class X)</p>
+                        <span class="timeline-date">Apr 2019 — Mar 2020</span>
+                        <div class="timeline-details">Percentage: 81%</div>
                     </div>
                 </div>
             </section>
 
-            <!-- 6. STORY CARD -->
-            <section class="portfolio-card story-card bento-col-2" id="story">
-                <span class="card-label">BIOGRAPHY</span>
-                
-                <div class="story-interactive-wrapper">
-                    <!-- Instructions for interaction -->
-                    <span class="drag-hint"><i class="ri-hand-coin-line"></i> FLING THE CARDS TO REVEAL STORY</span>
-                    
-                    <!-- Draggable Stack Canvas -->
-                    <div class="photo-stack" id="photo-stack">
-                        <div class="photo-frame draggable-card" style="--rotation: -6deg; --x: -20px; --y: 5px; z-index: 3;">
-                            <img src="assets/story1.png" alt="Engineering Canvas" draggable="false">
-                            <span class="frame-label">Lovely Professional Univ</span>
-                        </div>
-                        <div class="photo-frame draggable-card" style="--rotation: 4deg; --x: 15px; --y: -10px; z-index: 2;">
-                            <img src="assets/story2.png" alt="Minimalist Workspace" draggable="false">
-                            <span class="frame-label">TryHackMe Labs</span>
-                        </div>
-                        <div class="photo-frame draggable-card" style="--rotation: -2deg; --x: -5px; --y: -25px; z-index: 1;">
-                            <img src="assets/story3.png" alt="Philosophy Reading" draggable="false">
-                            <span class="frame-label">Waste Warriors Volunteer</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="story-text-container">
-                    <p class="story-desc collapsed" id="story-desc">
-                        My name is Nishad Sharma. I am a Computer Science &amp; Engineering graduate from Lovely Professional University with a deep focus on cybersecurity, penetration testing, and software development. I wear multiple hats—engineering secure code, conducting network vulnerability scans, and designing platforms like smartBus. In addition to technical work, I have a passion for community volunteering (like my work with the Waste Warriors Society in Dharamshala) and digital media editing. I believe secure software should also have clean usability and design.
-                    </p>
-                    <button class="view-more-btn" id="story-toggle-btn">
-                        <span>View more</span> <i class="ri-arrow-down-s-line"></i>
-                    </button>
+            <!-- 5. EXPERIENCE (EXTRACURRICULAR VOLUNTEER) CARD -->
+            <section class="portfolio-card experience-column-card bento-col-1" id="experience">
+                <span class="card-label">EXPERIENCE</span>
+                <div class="volunteer-block">
+                    <h4 class="volunteer-title">Waste Warriors Society</h4>
+                    <p class="volunteer-role">Volunteer</p>
+                    <span class="volunteer-date">Jul 2023 | Dharamshala, HP</span>
+                    <ul class="volunteer-bullets">
+                        <li>Participated in awareness campaigns and data collection initiatives focused on sustainable
+                            waste management.</li>
+                        <li>Collaborated with a multidisciplinary team to plan and execute community outreach programs.
+                        </li>
+                        <li>Edited video content and presentations to support educational outreach.</li>
+                    </ul>
                 </div>
             </section>
 
-            <!-- 7. PEER ENDORSEMENTS -->
-            <section class="portfolio-card recommendations-card bento-col-3" id="recommendations">
-                <div class="card-header-with-actions">
-                    <span class="card-label">PEER ENDORSEMENTS</span>
-                    <button class="add-testimonial-btn" id="open-testimonial-modal" aria-label="Add Recommendation">
-                        <i class="ri-add-line"></i> Endorse Nishad
-                    </button>
-                </div>
-
-                <!-- Default Recommendations -->
-                <div class="recommendations-container" id="recommendations-container">
-                    <div class="preloaded-recommendations-list">
-                        <!-- Rec 1 -->
-                        <div class="testimonial-item preloaded">
-                            <p class="testimonial-text">"Nishad was a standout student during his time at LPU. His final year project, smartBus, demonstrated a mature grasp of secure API design, web optimization, and full-stack integration."</p>
-                            <div class="testimonial-author">
-                                <div class="testimonial-author-avatar"><i class="ri-graduation-cap-line"></i></div>
-                                <div class="testimonial-meta">
-                                    <span class="testimonial-name">Dr. Amit Verma</span>
-                                    <span class="testimonial-role">Professor of CSE at Lovely Professional University</span>
-                                </div>
-                            </div>
+            <!-- 6. ACHIEVEMENTS CARD -->
+            <section class="portfolio-card achievements-column-card bento-col-1" id="achievements">
+                <span class="card-label">ACHIEVEMENTS</span>
+                <div class="achievements-block">
+                    <div class="thm-header">
+                        <i class="ri-shield-check-line thm-icon"></i>
+                        <h4 class="achievements-title">TryHackMe</h4>
+                        <span class="achievements-date">Aug 2025</span>
+                    </div>
+                    <div class="achievement-metric-grid">
+                        <div class="metric-box">
+                            <span class="metric-val">Top 5%</span>
+                            <span class="metric-lbl">Global Rank</span>
                         </div>
-                        
-                        <!-- Rec 2 -->
-                        <div class="testimonial-item preloaded">
-                            <p class="testimonial-text">"Nishad's focus on vulnerability analysis and secure coding is exceptional. He was also a highly motivated volunteer, helping us coordinate waste management data campaigns in Dharamshala."</p>
-                            <div class="testimonial-author">
-                                <div class="testimonial-author-avatar"><i class="ri-user-heart-line"></i></div>
-                                <div class="testimonial-meta">
-                                    <span class="testimonial-name">Rajesh Kumar</span>
-                                    <span class="testimonial-role">Coordinator at Waste Warriors Society</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Rec 3 -->
-                        <div class="testimonial-item preloaded">
-                            <p class="testimonial-text">"Nishad's steganography utilities are elegant. He successfully combined PyCryptodome encryption with modular Python LSB stego while maintaining clean user interfaces."</p>
-                            <div class="testimonial-author">
-                                <div class="testimonial-author-avatar"><i class="ri-code-s-slash-line"></i></div>
-                                <div class="testimonial-meta">
-                                    <span class="testimonial-name">Siddharth Sen</span>
-                                    <span class="testimonial-role">Independent Security Researcher</span>
-                                </div>
-                            </div>
+                        <div class="metric-box">
+                            <span class="metric-val">80+</span>
+                            <span class="metric-lbl">Rooms Done</span>
                         </div>
                     </div>
+                    <ul class="achievements-bullets">
+                        <li>Earned 17 verified badges for hands-on, scenario-based cybersecurity challenges.</li>
+                        <li>Completed lab rooms across Web Exploitation, Networking, Malware, and Digital Forensics.
+                        </li>
+                    </ul>
+                </div>
+            </section>
 
-                    <!-- Default Empty State (Hidden initially) -->
-                    <div class="empty-state" id="recommendations-empty" style="display: none;">
-                        <div class="empty-icon-wrapper">
-                            <i class="ri-chat-3-line"></i>
+            <!-- 7. CERTIFICATES CARD -->
+            <section class="portfolio-card certificates-card bento-col-2" id="certificates">
+                <span class="card-label">CERTIFICATES</span>
+                <div class="certificates-grid-layout">
+                    <div class="cert-item">
+                        <div class="cert-icon-wrapper"><i class="ri-verified-badge-line"></i></div>
+                        <div class="cert-details">
+                            <h4 class="cert-title">Cyber Security 101</h4>
+                            <p class="cert-issuer">TryHackMe • Aug 2025</p>
                         </div>
-                        <h4 class="empty-title">No client recommendations</h4>
-                        <p class="empty-desc">Submit your peer endorsement to display it on the grid.</p>
-                        <button class="btn btn-outline" id="empty-state-add-btn">Add Testimonial</button>
+                    </div>
+                    <div class="cert-item">
+                        <div class="cert-icon-wrapper"><i class="ri-verified-badge-line"></i></div>
+                        <div class="cert-details">
+                            <h4 class="cert-title">Cloud Computing</h4>
+                            <p class="cert-issuer">NPTEL Swayam • Oct 2024</p>
+                        </div>
+                    </div>
+                    <div class="cert-item">
+                        <div class="cert-icon-wrapper"><i class="ri-verified-badge-line"></i></div>
+                        <div class="cert-details">
+                            <h4 class="cert-title">Master Java Programming</h4>
+                            <p class="cert-issuer">GeeksForGeeks • Apr 2024</p>
+                        </div>
+                    </div>
+                    <div class="cert-item">
+                        <div class="cert-icon-wrapper"><i class="ri-verified-badge-line"></i></div>
+                        <div class="cert-details">
+                            <h4 class="cert-title">Mastering Data Structures using C &amp; C++</h4>
+                            <p class="cert-issuer">Udemy • Dec 2023</p>
+                        </div>
                     </div>
                 </div>
             </section>
 
-            <!-- 8. QUICK ACTIONS & CONTACT -->
-            <section class="contact-grid-section bento-col-3" id="contact">
-                <div class="contact-grid">
-                    <!-- Copy Email Button -->
+            <!-- 8. QUICK CONTACT CARD -->
+            <section class="portfolio-card contact-bento-card bento-col-1" id="contact">
+                <span class="card-label">CONNECT</span>
+                <div class="contact-bento-grid">
                     <button class="contact-btn copy-btn" data-copy="nishadsharma01@gmail.com" aria-label="Copy Email">
                         <div class="btn-content">
-                            <span class="btn-title">Copy email</span>
+                            <span class="btn-title">Email</span>
                             <i class="ri-mail-line btn-icon"></i>
                         </div>
-                        <span class="tooltip-text">Copy to clipboard</span>
+                        <span class="tooltip-text">Copy clipboard</span>
                     </button>
-
-                    <!-- Copy Phone Button -->
-                    <button class="contact-btn copy-btn" data-copy="+91 9418096721" aria-label="Copy Phone">
+                    <button class="contact-btn copy-btn" data-copy="+91-94180 96721" aria-label="Copy Phone">
                         <div class="btn-content">
-                            <span class="btn-title">Copy phone</span>
+                            <span class="btn-title">Phone</span>
                             <i class="ri-phone-line btn-icon"></i>
                         </div>
-                        <span class="tooltip-text">Copy to clipboard</span>
+                        <span class="tooltip-text">Copy clipboard</span>
                     </button>
-
-                    <!-- LinkedIn Link -->
-                    <a href="https://linkedin.com/in/nishad-sharma" target="_blank" rel="noopener noreferrer" class="contact-btn link-btn" aria-label="LinkedIn Profile">
+                    <a href="https://linkedin.com/in/nishad-sharma" target="_blank" rel="noopener noreferrer"
+                        class="contact-btn link-btn" aria-label="LinkedIn Profile">
                         <div class="btn-content">
-                            <span class="btn-title">Linkedin</span>
+                            <span class="btn-title">LinkedIn</span>
                             <i class="ri-linkedin-box-line btn-icon"></i>
                         </div>
                     </a>
-
-                    <!-- GitHub Link -->
-                    <a href="https://github.com/NishadSharma" target="_blank" rel="noopener noreferrer" class="contact-btn link-btn" aria-label="GitHub Profile">
+                    <a href="https://github.com/NishadSharma" target="_blank" rel="noopener noreferrer"
+                        class="contact-btn link-btn" aria-label="GitHub Profile">
                         <div class="btn-content">
                             <span class="btn-title">GitHub</span>
                             <i class="ri-github-line btn-icon"></i>
                         </div>
                     </a>
-
-                    <!-- Resume Link -->
-                    <a href="assets/resume.pdf" target="_blank" class="contact-btn link-btn" aria-label="View Resume">
-                        <div class="btn-content">
-                            <span class="btn-title">Resume / CV</span>
-                            <i class="ri-file-text-line btn-icon"></i>
-                        </div>
-                    </a>
                 </div>
             </section>
         </main>
-        
-        <footer class="portfolio-footer-bottom">
-            <p>&copy; 2026 Nishad Sharma. Built from scratch with glassmorphic architectures.</p>
-        </footer>
-    </div>
 
-    <!-- Testimonial Modal Dialog -->
-    <div class="modal" id="testimonial-modal">
-        <div class="modal-content">
-            <button class="close-modal-btn" id="close-testimonial-modal" aria-label="Close Modal">
-                <i class="ri-close-line"></i>
-            </button>
-            <h3 class="modal-title">Endorse Nishad</h3>
-            <form id="testimonial-form">
-                <div class="form-group">
-                    <label for="testimonial-name">Your Name</label>
-                    <input type="text" id="testimonial-name" required placeholder="e.g. John Doe">
-                </div>
-                <div class="form-group">
-                    <label for="testimonial-role">Your Role / Company</label>
-                    <input type="text" id="testimonial-role" required placeholder="e.g. Security Director at LPU">
-                </div>
-                <div class="form-group">
-                    <label for="testimonial-text">Endorsement Details</label>
-                    <textarea id="testimonial-text" rows="4" required placeholder="Share your experience working with Nishad..."></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary submit-btn">Submit Endorsement</button>
-            </form>
-        </div>
+        <footer class="portfolio-footer-bottom">
+            <p>&copy; 2026 Nishad Sharma. All rights reserved.</p>
+        </footer>
     </div>
 
     <!-- Main JavaScript Logic -->
     <script src="app.js"></script>
 </body>
+
 </html>
