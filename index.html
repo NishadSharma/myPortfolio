@@ -13,12 +13,12 @@
 
     <header class="site-header" data-header>
       <div class="site-header__inner">
-        <a class="wordmark" href="#main-content" aria-label="Portfolio home">
-          <span class="wordmark__full">Portfolio</span>
-          <span class="wordmark__compact" aria-hidden="true">P</span>
+        <a class="wordmark" href="#main-content" aria-label="Profile home">
+          <span class="wordmark__full">[Name]</span>
+          <span class="wordmark__compact" aria-hidden="true">N</span>
         </a>
 
-        <button class="menu-toggle" type="button" aria-controls="site-navigation" aria-expanded="false">
+        <button class="menu-toggle" type="button" aria-label="Open navigation" aria-controls="site-navigation" aria-expanded="false">
           <span class="menu-toggle__icon" aria-hidden="true">
             <span></span>
             <span></span>
@@ -33,13 +33,18 @@
             <a href="#education" data-nav-link="education">Education</a>
             <a href="#projects" data-nav-link="projects">Projects</a>
             <a href="#research" data-nav-link="research">Research</a>
-            <a href="#skills" data-nav-link="skills">Skills</a>
+            <a href="#contact" data-nav-link="contact">Contact</a>
           </div>
           <div class="site-navigation__actions">
-            <a href="#contact" data-nav-link="contact">Contact</a>
-            <button class="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false">
-              <span class="theme-toggle__icon" aria-hidden="true"></span>
-              <span class="theme-toggle__label">Theme</span>
+            <button class="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false" title="Switch theme">
+              <svg class="theme-toggle__icon theme-toggle__icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="3.5" />
+                <path d="M12 2.5v2m0 15v2m9.5-9.5h-2m-15 0h-2m16.22-6.72-1.42 1.42M6.7 17.3l-1.42 1.42m13.44 0-1.42-1.42M6.7 6.7 5.28 5.28" />
+              </svg>
+              <svg class="theme-toggle__icon theme-toggle__icon--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M20.2 15.1A8.5 8.5 0 0 1 8.9 3.8 8.5 8.5 0 1 0 20.2 15.1Z" />
+              </svg>
+              <span class="theme-toggle__label">Appearance</span>
             </button>
           </div>
         </nav>
@@ -47,53 +52,37 @@
     </header>
 
     <main id="main-content">
-      <section class="hero" aria-labelledby="hero-heading">
-        <div class="hero__inner">
-          <p class="hero__intro">Hello, I'm [Name].</p>
-          <div class="hero__rule" aria-hidden="true"></div>
-          <h1 id="hero-heading">Computer Science Engineer.</h1>
-          <p class="hero__summary">
-            Interested in cybersecurity, computer networks, systems, and research-oriented engineering.
-          </p>
-          <div class="hero__actions">
-            <a class="button button--primary" href="#projects">View Projects <span aria-hidden="true">&rarr;</span></a>
-            <a class="button button--secondary" href="#contact">Contact Me</a>
+      <section class="profile-header" aria-labelledby="profile-name">
+        <div class="profile-header__inner">
+          <div class="profile-header__photo">
+            <span class="profile-header__photo-placeholder" aria-hidden="true">Photo</span>
+            <img
+              class="profile-header__photo-image"
+              src="assets/images/profile.jpg"
+              alt="Portrait of [Name], Computer Science graduate"
+              decoding="async"
+              data-profile-photo
+            />
           </div>
-          <p class="hero__status">
-            <span class="hero__status-mark" aria-hidden="true"></span>
-            Currently preparing for postgraduate studies.
-          </p>
-        </div>
-        <div class="hero__signature" aria-hidden="true">
-          <svg class="system-map" viewBox="0 0 360 280" role="presentation">
-            <g class="system-map__grid">
-              <path d="M40 40H320M40 140H320M40 240H320M40 40V240M180 40V240M320 40V240" />
-            </g>
-            <g class="system-map__links">
-              <path d="M40 140L110 80L180 140L250 80L320 140" />
-              <path d="M110 80L110 220L250 220L250 80" />
-              <path d="M180 140L180 40" />
-            </g>
-            <g class="system-map__nodes">
-              <circle cx="40" cy="140" r="4" />
-              <circle cx="110" cy="80" r="4" />
-              <circle cx="180" cy="140" r="6" />
-              <circle cx="250" cy="80" r="4" />
-              <circle cx="320" cy="140" r="4" />
-              <circle cx="110" cy="220" r="3" />
-              <circle cx="250" cy="220" r="3" />
-              <circle class="system-map__pulse" cx="180" cy="40" r="3" />
-            </g>
-          </svg>
-          <p class="hero__signature-label">SYSTEM MAP / 01</p>
+          <div class="profile-header__content">
+            <h1 id="profile-name">[Name]</h1>
+            <p class="profile-header__title">Computer Science Graduate <span aria-hidden="true">&middot;</span> Preparing for Higher Studies</p>
+            <p class="profile-header__location">India</p>
+            <p class="profile-header__interests">Cybersecurity <span aria-hidden="true">&middot;</span> Computer Networks <span aria-hidden="true">&middot;</span> Systems</p>
+            <div class="profile-header__actions">
+              <a class="profile-action profile-action--primary" href="assets/cv.pdf">View CV</a>
+              <a class="profile-action profile-action--secondary" href="#contact">Contact</a>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section class="about" id="about" aria-labelledby="about-heading">
+      <div class="profile-content">
+      <section class="about" id="about" aria-labelledby="about-section-heading">
         <div class="about__inner">
-          <p class="section-label">01 &mdash; About</p>
+          <h2 class="section-heading" id="about-section-heading">About</h2>
           <div class="about__content">
-            <h2 id="about-heading">Building a deeper foundation for meaningful technical work.</h2>
+            <h3 id="about-heading">Building a deeper foundation for meaningful technical work.</h3>
             <div class="about__copy">
               <p>
                 I am a Computer Science graduate currently preparing for higher studies and strengthening my core technical fundamentals.
@@ -106,14 +95,119 @@
         </div>
       </section>
 
-      <section class="education" id="education" aria-labelledby="education-heading">
+      <section class="currently" id="currently" aria-labelledby="currently-section-heading">
+        <div class="currently__inner">
+          <h2 class="section-heading" id="currently-section-heading">Currently</h2>
+          <div class="currently__content">
+            <h3 id="currently-heading">What I am working on right now.</h3>
+            <div class="currently__list">
+              <article class="currently__item">
+                <h4>Higher studies preparation</h4>
+                <p>Preparing for postgraduate studies and strengthening my technical fundamentals.</p>
+              </article>
+              <article class="currently__item">
+                <h4>GATE 2027</h4>
+                <p>Preparing for the Graduate Aptitude Test in Engineering.</p>
+              </article>
+              <article class="currently__item">
+                <h4>Computer Science fundamentals</h4>
+                <p>Strengthening fundamentals and regularly revising core subjects.</p>
+              </article>
+              <article class="currently__item">
+                <h4>Cybersecurity</h4>
+                <p>Exploring cybersecurity, network security and related concepts.</p>
+              </article>
+              <article class="currently__item">
+                <h4>Computer networks</h4>
+                <p>Building a deeper understanding of networks and their systems.</p>
+              </article>
+              <article class="currently__item">
+                <h4>Technical projects</h4>
+                <p>Developing technical projects and exploring research-oriented work.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="projects" id="projects" aria-labelledby="projects-section-heading">
+        <div class="projects__inner">
+          <h2 class="section-heading" id="projects-section-heading">Projects</h2>
+          <div class="projects__content">
+            <h3 id="projects-heading">Selected technical work.</h3>
+            <div class="projects__list">
+              <article class="project" aria-labelledby="project-phishing-title">
+                <div class="project__record">
+                  <div class="project__main">
+                    <h3 id="project-phishing-title">AI-Based Phishing Detection System</h3>
+                    <p>A system designed to identify potentially malicious URLs or phishing websites using security-related features and machine-learning techniques.</p>
+                  </div>
+                  <dl class="project__meta">
+                    <div>
+                      <dt>Role / contribution</dt>
+                      <dd>Not specified</dd>
+                    </div>
+                    <div>
+                      <dt>Technology</dt>
+                      <dd>Python &middot; Machine Learning &middot; Cybersecurity</dd>
+                    </div>
+                    <div>
+                      <dt>Year</dt>
+                      <dd>Not specified</dd>
+                    </div>
+                    <div class="project__resource-group">
+                      <dt>Links</dt>
+                      <dd class="project__links">
+                        <a href="#" aria-label="GitHub repository for AI-Based Phishing Detection System">GitHub <span aria-hidden="true">&rarr;</span></a>
+                        <a href="#" aria-label="Demo or documentation for AI-Based Phishing Detection System">Demo / Documentation <span aria-hidden="true">&rarr;</span></a>
+                      </dd>
+                    </div>
+                  </dl>
+                </div>
+              </article>
+
+              <article class="project" aria-labelledby="project-transit-title">
+                <div class="project__record">
+                  <div class="project__main">
+                    <h3 id="project-transit-title">Real-Time Public Transport Tracking for Small Cities</h3>
+                    <p>A research-oriented system focused on improving real-time public transport visibility and accessibility in smaller urban areas.</p>
+                  </div>
+                  <dl class="project__meta">
+                    <div>
+                      <dt>Role / contribution</dt>
+                      <dd>Not specified</dd>
+                    </div>
+                    <div>
+                      <dt>Technology</dt>
+                      <dd>Web Application &middot; APIs &middot; Research</dd>
+                    </div>
+                    <div>
+                      <dt>Year</dt>
+                      <dd>Not specified</dd>
+                    </div>
+                    <div class="project__resource-group">
+                      <dt>Links</dt>
+                      <dd class="project__links">
+                        <a href="#" aria-label="GitHub repository for Real-Time Public Transport Tracking for Small Cities">GitHub <span aria-hidden="true">&rarr;</span></a>
+                        <a href="#" aria-label="Demo or documentation for Real-Time Public Transport Tracking for Small Cities">Demo / Documentation <span aria-hidden="true">&rarr;</span></a>
+                      </dd>
+                    </div>
+                  </dl>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="education" id="education" aria-labelledby="education-section-heading">
         <div class="education__inner">
-          <p class="section-label">02 &mdash; Education</p>
+          <h2 class="section-heading" id="education-section-heading">Education</h2>
           <div class="education__content">
             <article class="education__entry">
               <div class="education__entry-heading">
                 <p class="education__period">Undergraduate study</p>
-                <h2 id="education-heading">Bachelor of Technology</h2>
+                <h3 id="education-heading">Bachelor of Technology</h3>
                 <p class="education__discipline">Computer Science and Engineering</p>
                 <p class="education__institution">Lovely Professional University</p>
               </div>
@@ -145,129 +239,36 @@
         </div>
       </section>
 
-      <section class="currently" id="currently" aria-labelledby="currently-heading">
-        <div class="currently__inner">
-          <p class="section-label">03 &mdash; Currently</p>
-          <div class="currently__content">
-            <h2 id="currently-heading">What I am working on right now.</h2>
-            <div class="currently__list">
-              <article class="currently__item">
-                <p class="currently__item-label">01</p>
-                <h3>GATE 2027</h3>
-                <p>Preparing for the Graduate Aptitude Test in Engineering.</p>
-              </article>
-              <article class="currently__item">
-                <p class="currently__item-label">02</p>
-                <h3>Core Computer Science</h3>
-                <p>Strengthening fundamentals and regularly revising core subjects.</p>
-              </article>
-              <article class="currently__item">
-                <p class="currently__item-label">03</p>
-                <h3>Cybersecurity &amp; Networks</h3>
-                <p>Exploring cybersecurity, network security and related concepts.</p>
-              </article>
-              <article class="currently__item">
-                <p class="currently__item-label">04</p>
-                <h3>Research &amp; Projects</h3>
-                <p>Developing technical projects and exploring research-oriented work.</p>
-              </article>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="projects" id="projects" aria-labelledby="projects-heading">
-        <div class="projects__inner">
-          <p class="section-label">04 &mdash; Selected Projects</p>
-          <div class="projects__content">
-            <h2 id="projects-heading">Selected technical work.</h2>
-            <div class="projects__list">
-              <article class="project">
-                <p class="project__number">01</p>
-                <div class="project__main">
-                  <h3>AI-Based Phishing Detection System</h3>
-                  <p>A system designed to identify potentially malicious URLs or phishing websites using security-related features and machine-learning techniques.</p>
-                </div>
-                <p class="project__stack">Python / Machine Learning / Cybersecurity</p>
-                <div class="project__links">
-                  <a href="#" aria-label="GitHub repository for AI-Based Phishing Detection System">GitHub <span aria-hidden="true">&rarr;</span></a>
-                  <a href="#" aria-label="Live demo for AI-Based Phishing Detection System">Live Demo <span aria-hidden="true">&rarr;</span></a>
-                </div>
-              </article>
-
-              <article class="project">
-                <p class="project__number">02</p>
-                <div class="project__main">
-                  <h3>Real-Time Public Transport Tracking for Small Cities</h3>
-                  <p>A research-oriented system focused on improving real-time public transport visibility and accessibility in smaller urban areas.</p>
-                </div>
-                <p class="project__stack">Web Application / APIs / Research</p>
-                <div class="project__links">
-                  <a href="#" aria-label="GitHub repository for Real-Time Public Transport Tracking for Small Cities">GitHub <span aria-hidden="true">&rarr;</span></a>
-                  <a href="#" aria-label="Live demo for Real-Time Public Transport Tracking for Small Cities">Live Demo <span aria-hidden="true">&rarr;</span></a>
-                </div>
-              </article>
-
-              <article class="project">
-                <p class="project__number">03</p>
-                <div class="project__main">
-                  <h3>Placeholder Project</h3>
-                  <p>A future project description can be added here as the portfolio grows.</p>
-                </div>
-                <p class="project__stack">Technology / Stack / TBD</p>
-                <div class="project__links">
-                  <a href="#" aria-label="GitHub repository for Placeholder Project">GitHub <span aria-hidden="true">&rarr;</span></a>
-                  <a href="#" aria-label="Live demo for Placeholder Project">Live Demo <span aria-hidden="true">&rarr;</span></a>
-                </div>
-              </article>
-
-              <article class="project">
-                <p class="project__number">04</p>
-                <div class="project__main">
-                  <h3>Placeholder Project</h3>
-                  <p>A future project description can be added here as the portfolio grows.</p>
-                </div>
-                <p class="project__stack">Technology / Stack / TBD</p>
-                <div class="project__links">
-                  <a href="#" aria-label="GitHub repository for Placeholder Project">GitHub <span aria-hidden="true">&rarr;</span></a>
-                  <a href="#" aria-label="Live demo for Placeholder Project">Live Demo <span aria-hidden="true">&rarr;</span></a>
-                </div>
-              </article>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="research" id="research" aria-labelledby="research-heading">
+      <section class="research" id="research" aria-labelledby="research-section-heading">
         <div class="research__inner">
-          <p class="section-label">05 &mdash; Research</p>
+          <h2 class="section-heading" id="research-section-heading">Research</h2>
           <div class="research__content">
             <article class="research__featured">
               <p class="research__type">Research focus</p>
-              <h2 id="research-heading">Real-Time Public Transport Tracking for Small Cities</h2>
+              <h3 id="research-heading">Real-Time Public Transport Tracking for Small Cities</h3>
               <p class="research__summary">
                 A research-oriented system focused on improving real-time public transport visibility and accessibility in smaller urban areas.
               </p>
-
-              <dl class="research__metadata">
-                <div>
-                  <dt>Research paper status</dt>
-                  <dd>[Status]</dd>
-                </div>
-                <div>
-                  <dt>Conference</dt>
-                  <dd>[Conference]</dd>
-                </div>
-                <div>
-                  <dt>Publication</dt>
-                  <dd>[Publication]</dd>
-                </div>
-                <div>
-                  <dt>Paper link</dt>
-                  <dd><a href="#">[Add link] <span aria-hidden="true">&rarr;</span></a></dd>
-                </div>
-              </dl>
             </article>
+
+            <dl class="research__metadata">
+              <div>
+                <dt>Research paper status</dt>
+                <dd>[Status]</dd>
+              </div>
+              <div>
+                <dt>Conference</dt>
+                <dd>[Conference]</dd>
+              </div>
+              <div>
+                <dt>Publication</dt>
+                <dd>[Publication]</dd>
+              </div>
+              <div>
+                <dt>Paper link</dt>
+                <dd><a href="#">[Add link] <span aria-hidden="true">&rarr;</span></a></dd>
+              </div>
+            </dl>
 
             <div class="research__future">
               <p class="research__future-label">Future papers &amp; publications</p>
@@ -277,11 +278,11 @@
         </div>
       </section>
 
-      <section class="skills" id="skills" aria-labelledby="skills-heading">
+      <section class="skills" id="skills" aria-labelledby="skills-section-heading">
         <div class="skills__inner">
-          <p class="section-label">06 &mdash; Technical Skills</p>
+          <h2 class="section-heading" id="skills-section-heading">Skills</h2>
           <div class="skills__content">
-            <h2 id="skills-heading">A practical foundation across the stack.</h2>
+            <h3 id="skills-heading">A practical foundation across the stack.</h3>
             <div class="skills__groups">
               <div class="skills__group">
                 <h3>Programming</h3>
@@ -332,11 +333,11 @@
         </div>
       </section>
 
-      <section class="contact" id="contact" aria-labelledby="contact-heading">
+      <section class="contact" id="contact" aria-labelledby="contact-section-heading">
         <div class="contact__inner">
-          <p class="section-label">07 &mdash; Contact</p>
+          <h2 class="section-heading" id="contact-section-heading">Contact</h2>
           <div class="contact__content">
-            <h2 id="contact-heading">Let's connect.</h2>
+            <h3 id="contact-heading">Let's connect.</h3>
             <p class="contact__summary">
               Open to conversations about higher studies, research, cybersecurity, computer networks, and interesting technical projects.
             </p>
@@ -360,6 +361,7 @@
           </div>
         </div>
       </section>
+      </div>
     </main>
 
     <footer class="site-footer">

@@ -1,24 +1,36 @@
 "use strict";
 
-const documentElement = document.documentElement;
 const header = document.querySelector("[data-header]");
 const menuToggle = document.querySelector(".menu-toggle");
 const navigation = document.querySelector(".site-navigation");
 const themeToggle = document.querySelector(".theme-toggle");
 const navigationLinks = [...document.querySelectorAll("[data-nav-link]")];
 const currentYear = document.querySelector("[data-current-year]");
-const pageSections = [...document.querySelectorAll("main > section")];
+const pageSections = [...document.querySelectorAll("main > section, .profile-content > section")];
+const profilePhoto = document.querySelector("[data-profile-photo]");
 const themeStorageKey = "portfolio-theme";
 
-documentElement.dataset.js = "ready";
+document.documentElement.dataset.js = "ready";
 currentYear.textContent = new Date().getFullYear();
+
+if (profilePhoto) {
+	const showProfilePhoto = () => profilePhoto.parentElement.classList.add("has-image");
+
+	if (profilePhoto.complete && profilePhoto.naturalWidth > 0) {
+		showProfilePhoto();
+	} else {
+		profilePhoto.addEventListener("load", showProfilePhoto, { once: true });
+	}
+}
 
 function setTheme(theme) {
 	const isDark = theme === "dark";
+	const nextTheme = isDark ? "light" : "dark";
 
-	documentElement.dataset.theme = isDark ? "dark" : "light";
+	document.documentElement.dataset.theme = isDark ? "dark" : "light";
 	themeToggle.setAttribute("aria-pressed", String(isDark));
-	themeToggle.setAttribute("aria-label", `Switch to ${isDark ? "light" : "dark"} theme`);
+	themeToggle.setAttribute("aria-label", `Switch to ${nextTheme} theme`);
+	themeToggle.setAttribute("title", `Switch to ${nextTheme} theme`);
 }
 
 function getInitialTheme() {
@@ -34,6 +46,7 @@ function getInitialTheme() {
 function closeNavigation() {
 	navigation.classList.remove("is-open");
 	menuToggle.setAttribute("aria-expanded", "false");
+	menuToggle.setAttribute("aria-label", "Open navigation");
 }
 
 function updateScrollState() {
@@ -114,10 +127,11 @@ revealSections();
 menuToggle.addEventListener("click", () => {
 	const isOpen = navigation.classList.toggle("is-open");
 	menuToggle.setAttribute("aria-expanded", String(isOpen));
+	menuToggle.setAttribute("aria-label", isOpen ? "Close navigation" : "Open navigation");
 });
 
 themeToggle.addEventListener("click", () => {
-	const nextTheme = documentElement.dataset.theme === "dark" ? "light" : "dark";
+	const nextTheme = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
 
 	setTheme(nextTheme);
 	localStorage.setItem(themeStorageKey, nextTheme);
