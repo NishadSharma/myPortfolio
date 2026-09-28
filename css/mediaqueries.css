@@ -1,111 +1,148 @@
-@media screen and (max-width: 1400px) {
-  #profile {
-    min-height: 83vh;
-    margin-bottom: 6rem;
-  }
-  .about-containers {
-    flex-wrap: wrap;
-  }
-  #contact,
-  #projects,
-  #achievement,
-  #extracurricular {
-    height: fit-content;
-  }
-}
-
-@media screen and (max-width: 1200px) {
+/* TABLET & SMALL DESKTOP (<= 1024px) */
+@media screen and (max-width: 1024px) {
   #desktop-nav {
     display: none;
   }
   #hamburger-nav {
     display: flex;
   }
-  #experience,
-  .experience-details-container {
-    margin-top: 2rem;
+
+  #profile {
+    gap: 3rem;
+    min-height: auto;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
   }
-  #profile,
+
+  #profile .section__pic-container {
+    height: 300px;
+    width: 300px;
+  }
+
   .section-container {
-    display: block;
+    gap: 2.5rem;
   }
-  .about-containers {
-    flex-direction: column;
+
+  #about .section__pic-container {
+    height: 300px;
+    width: 300px;
   }
+
+  #projects .about-containers {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .arrow {
     display: none;
   }
-  section,
+}
+
+/* TABLET VERTICAL & LARGE MOBILE (<= 820px) */
+@media screen and (max-width: 820px) {
+  #profile {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+
   .section-container {
-    height: fit-content;
+    flex-direction: column;
+    text-align: center;
   }
-  section {
-    margin: 0 5%;
+
+  #about .section__pic-container {
+    margin: 0 auto;
   }
-  .section__pic-container {
-    width: 275px;
-    height: 275px;
-    margin: 0 auto 2rem;
+
+  #profile .section__pic-container {
+    margin: 0 auto;
+    height: 260px;
+    width: 260px;
   }
+
+  #projects .about-containers {
+    grid-template-columns: 1fr;
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #achievement .about-containers {
+    grid-template-columns: 1fr;
+  }
+
   .about-containers {
-    margin-top: 0;
+    flex-direction: column;
+  }
+
+  .title {
+    font-size: 2.35rem;
+  }
+
+  .section__text__p2 {
+    font-size: 1.4rem;
   }
 }
 
+/* MOBILE (<= 600px) */
 @media screen and (max-width: 600px) {
-  #contact,
-  footer {
-    height: 40vh;
+  section {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
   }
-  #profile {
-    height: 83vh;
-    margin-bottom: 0;
+
+  .nav-container {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
   }
-  article {
-    font-size: 1rem;
+
+  .title {
+    font-size: 2rem;
+    margin-bottom: 1.75rem;
   }
-  footer nav {
-    height: fit-content;
-    margin-bottom: 2rem;
+
+  #profile .section__pic-container {
+    height: 220px;
+    width: 220px;
   }
-  .about-containers,
-  .contact-info-upper-container,
+
+  #about .section__pic-container {
+    height: 240px;
+    width: 240px;
+  }
+
+  .article-container {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
   .btn-container {
     flex-wrap: wrap;
   }
-  .contact-info-container {
-    margin: 0;
+
+  .btn {
+    width: 100%;
   }
-  .contact-info-container p,
-  .nav-links li a {
-    font-size: 1rem;
-  }
-  .experience-sub-title {
-    font-size: 1.25rem;
-  }
-  .logo {
-    font-size: 1.5rem;
-  }
-  .nav-links {
+
+  .contact-info-upper-container {
     flex-direction: column;
-    gap: 0.5rem;
-    text-align: center;
+    gap: 1.25rem;
+    padding: 1.25rem;
   }
-  .project-img {
-    height: 180px;
+
+  footer .nav-links {
+    flex-direction: column;
+    gap: 0.75rem;
   }
-  .section__pic-container {
-    width: auto;
-    height: 46vw;
-    justify-content: center;
+
+  .extracurricular-meta {
+    flex-direction: column;
+    gap: 0.35rem;
   }
-  .section__text__p2 {
-    font-size: 1.25rem;
-  }
-  .title {
-    font-size: 2rem;
-  }
-  .text-container {
-    text-align: justify;
+
+  .meta-separator {
+    display: none;
   }
 }

@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>myPortfolio</title>
-    <link rel="stylesheet" href="/css/style.css" />
-    <link rel="stylesheet" href="/css/mediaqueries.css" />
-  </head>
-  <body>
-    <nav id="desktop-nav">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>myPortfolio</title>
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/mediaqueries.css" />
+</head>
+
+<body>
+  <nav id="desktop-nav">
+    <div class="nav-container">
       <div class="logo">myPortfolio</div>
       <div>
         <ul class="nav-links">
@@ -20,8 +23,10 @@
           <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
-    </nav>
-    <nav id="hamburger-nav">
+    </div>
+  </nav>
+  <nav id="hamburger-nav">
+    <div class="nav-container">
       <div class="logo">myPortfolio</div>
       <div class="hamburger-menu">
         <div class="hamburger-icon" onclick="toggleMenu()">
@@ -37,451 +42,362 @@
           <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
         </div>
       </div>
-    </nav>
-    <section id="profile">
+    </div>
+  </nav>
+  <section id="profile">
+    <div class="section__pic-container">
+      <img src="./assets/profile-pic.png" alt="Nishad profile picture" />
+    </div>
+    <div class="section__text">
+      <p class="section__text__p1">Hello, I'm</p>
+      <h1 class="title">Nishad</h1>
+      <p class="section__text__p2">Cybersecurity Enthusiast & Developer</p>
+      <div class="btn-container">
+        <button class="btn btn-color-2" onclick="window.open('./assets/resume-example.pdf')">
+          Download CV
+        </button>
+        <button class="btn btn-color-1" onclick="location.href='./#contact'">
+          Contact Info
+        </button>
+      </div>
+      <div id="socials-container">
+        <img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon"
+          onclick="location.href='https://www.linkedin.com/in/nishad-sharma/'" />
+        <img src="./assets/github.png" alt="My Github profile" class="icon"
+          onclick="location.href='https://github.com/NishadSharma'" />
+      </div>
+    </div>
+  </section>
+  <section id="about">
+    <p class="section__text__p1">Get To Know More</p>
+    <h1 class="title">About Me</h1>
+    <div class="section-container">
       <div class="section__pic-container">
-        <img src="./assets/profile-pic.png" alt="Nishad profile picture" />
+        <img src="./assets/about-pic.png" alt="Profile picture" class="about-pic" />
       </div>
-      <div class="section__text">
-        <p class="section__text__p1">Hello, I'm</p>
-        <h1 class="title">Nishad Sharma</h1>
-        <p class="section__text__p2">Cybersecurity Enthusiast & Developer</p>
-        <div class="btn-container">
-          <button
-            class="btn btn-color-2"
-            onclick="window.open('./assets/resume-example.pdf')"
-          >
-            Download CV
-          </button>
-          <button class="btn btn-color-1" onclick="location.href='./#contact'">
-            Contact Info
-          </button>
-        </div>
-        <div id="socials-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="My LinkedIn profile"
-            class="icon"
-            onclick="location.href='https://www.linkedin.com/in/nishad-sharma/'"
-          />
-          <img
-            src="./assets/github.png"
-            alt="My Github profile"
-            class="icon"
-            onclick="location.href='https://github.com/NishadSharma'"
-          />
-        </div>
-      </div>
-    </section>
-    <section id="about">
-      <p class="section__text__p1">Get To Know More</p>
-      <h1 class="title">About Me</h1>
-      <div class="section-container">
-        <div class="section__pic-container">
-          <img
-            src="./assets/about-pic.png"
-            alt="Profile picture"
-            class="about-pic"
-          />
-        </div>
-        <div class="about-details-container">
-          <div class="about-containers">
-            <div class="details-container">
-              <img
-                src="./assets/experience.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <h3>Experience</h3>
-              <p>2+ years<br />Cybersecurity & Development</p>
-            </div>
-            <div class="details-container">
-              <img
-                src="./assets/education.png"
-                alt="Education icon"
-                class="icon"
-              />
-              <h3>Education</h3>
-              <p>B.Tech, Computer Science & Engineering<br />Lovely Professional University</p>
-            </div>
-          </div>
-          <div class="text-container">
-            <p>
-              My name is Nishad, and I recently completed my graduation in Computer Science and Engineering from Lovely Professional University. I am a simple and self-motivated person who believes in learning from every experience. I enjoy researching gaps in my domain, especially in cybersecurity and networking, and I have also studied Cyber Laws as part of my coursework, giving me a strong understanding of relevant sections under the Indian IT Act, 2000.
-            </p>
-            <p style="margin-top: 1rem;">
-              I am a positive, goal-oriented individual with a strong willingness to grow, learn, and take on new challenges. Apart from technical work, I am also interested in psychological understanding, deeper meaning, and self-development. I am always motivated to build, experiment, and contribute with purpose.
-            </p>
-          </div>
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#experience'"
-      />
-    </section>
-    <section id="experience">
-      <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Skills & Experience</h1>
-      <div class="experience-details-container">
+      <div class="about-details-container">
         <div class="about-containers">
           <div class="details-container">
-            <h2 class="experience-sub-title">Technical Skills</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>C</h3>
-                  <p>Proficient</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Bash</h3>
-                  <p>Proficient</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>SQL</h3>
-                  <p>Proficient</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Digital Logic</h3>
-                  <p>Strong</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>COA</h3>
-                  <p>Strong</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Cyber Laws</h3>
-                  <p>Strong</p>
-                </div>
-              </article>
-            </div>
+            <img src="./assets/experience.png" alt="Experience icon" class="icon" />
+            <h3>Experience</h3>
+            <p>2+ years<br />Cybersecurity & Development</p>
           </div>
           <div class="details-container">
-            <h2 class="experience-sub-title">Tools & Platforms</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Git</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>GitHub</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>VS Code</h3>
-                  <p>Advanced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Nmap</h3>
-                  <p>Advanced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Linux</h3>
-                  <p>Advanced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Windows</h3>
-                  <p>Advanced</p>
-                </div>
-              </article>
+            <img src="./assets/education.png" alt="Education icon" class="icon" />
+            <h3>Education</h3>
+            <p>B.Tech, Computer Science & Engineering<br />Lovely Professional University</p>
+          </div>
+        </div>
+        <div class="text-container">
+          <p>
+            My name is Nishad, and I recently completed my graduation in Computer Science and Engineering from Lovely
+            Professional University. I am a simple and self-motivated person who believes in learning from every
+            experience. I enjoy researching gaps in my domain, especially in cybersecurity and networking, and I have
+            also studied Cyber Laws as part of my coursework, giving me a strong understanding of relevant sections
+            under the Indian IT Act, 2000.
+          </p>
+          <p style="margin-top: 1rem;">
+            I am a positive, goal-oriented individual with a strong willingness to grow, learn, and take on new
+            challenges. Apart from technical work, I am also interested in psychological understanding, deeper meaning,
+            and self-development. I am always motivated to build, experiment, and contribute with purpose.
+          </p>
+        </div>
+      </div>
+    </div>
+    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#experience'" />
+  </section>
+  <section id="experience">
+    <p class="section__text__p1">Explore My</p>
+    <h1 class="title">Skills & Experience</h1>
+    <div class="experience-details-container">
+      <div class="about-containers">
+        <div class="details-container">
+          <h2 class="experience-sub-title">Technical Skills</h2>
+          <div class="article-container">
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>C</h3>
+                <p>Proficient</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Bash</h3>
+                <p>Proficient</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>SQL</h3>
+                <p>Proficient</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Digital Logic</h3>
+                <p>Strong</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>COA</h3>
+                <p>Strong</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Cyber Laws</h3>
+                <p>Strong</p>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="details-container">
+          <h2 class="experience-sub-title">Tools & Platforms</h2>
+          <div class="article-container">
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Git</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>GitHub</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>VS Code</h3>
+                <p>Advanced</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Nmap</h3>
+                <p>Advanced</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Linux</h3>
+                <p>Advanced</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Windows</h3>
+                <p>Advanced</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#projects'" />
+  </section>
+  <section id="projects">
+    <p class="section__text__p1">Browse My Recent</p>
+    <h1 class="title">Projects</h1>
+    <div class="experience-details-container">
+      <div class="about-containers">
+        <div class="details-container color-container">
+          <div class="project-img-container">
+            <img src="./assets/project-1.png" alt="Project 1" class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">
+            Real Time Public Transport Tracking Platform – smartBus
+          </h2>
+          <p class="project-desc">
+            A web-based platform for real-time bus tracking and ETA estimation using secure APIs and interactive maps.
+          </p>
+          <p class="project-desc">
+            Built with a government-grade UI, role-based access, and scalable architecture to simulate modern
+            intelligent transport systems.
+          </p>
+          <p class="project-tech"><strong>Tech:</strong> React, Vite, Node.js, MongoDB, Leaflet.js, Express</p>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/NishadSharma'">
+              Github
+            </button>
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/NishadSharma'">
+              Live Demo
+            </button>
+          </div>
+        </div>
+        <div class="details-container color-container">
+          <div class="project-img-container">
+            <img src="./assets/project-2.png" alt="Project 2" class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">
+            Secure Image Steganography
+          </h2>
+          <p class="project-desc">
+            Developed a secure communication system by combining AES-256 encryption with LSB image steganography.
+          </p>
+          <p class="project-desc">
+            Implemented dual-layer secure data hiding in images and built both GUI and CLI versions with modular crypto
+            and stego components.
+          </p>
+          <p class="project-tech"><strong>Tech:</strong> Python, PyCryptodome, Pillow, Tkinter, Pytest</p>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/NishadSharma'">
+              Github
+            </button>
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/NishadSharma'">
+              Live Demo
+            </button>
+          </div>
+        </div>
+        <div class="details-container color-container">
+          <div class="project-img-container">
+            <img src="./assets/project-3.png" alt="Project 3" class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">
+            Personal Vulnerability Scanner
+          </h2>
+          <p class="project-desc">
+            Developed a cross-platform vulnerability scanner to detect open ports, running services, and CVEs.
+          </p>
+          <p class="project-desc">
+            Automated multi-format reporting with exports in .txt, .csv, and .html for analysis and presentation.
+          </p>
+          <p class="project-tech"><strong>Tech:</strong> Python, Nmap, Vulners NSE</p>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/NishadSharma'">
+              Github
+            </button>
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/NishadSharma'">
+              Live Demo
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#achievement'" />
+  </section>
+  <section id="achievement">
+    <p class="section__text__p1">Achievements &</p>
+    <h1 class="title">Certifications</h1>
+    <div class="experience-details-container">
+      <div class="about-containers">
+        <div class="details-container">
+          <h2 class="experience-sub-title">Certifications</h2>
+          <div class="list-container">
+            <div class="list-item">
+              <span class="list-item-bullet">•</span>
+              <p>Cyber Security 101 by TryHackMe — Aug 2025</p>
+            </div>
+            <div class="list-item">
+              <span class="list-item-bullet">•</span>
+              <p>Cloud Computing by NPTEL SWAYAM — Oct 2024</p>
+            </div>
+            <div class="list-item">
+              <span class="list-item-bullet">•</span>
+              <p>Master Java Programming by GeeksforGeeks — Apr 2024</p>
+            </div>
+            <div class="list-item">
+              <span class="list-item-bullet">•</span>
+              <p>Mastering Data Structures using C & C++ by Udemy — Dec 2023</p>
+            </div>
+          </div>
+        </div>
+        <div class="details-container">
+          <h2 class="experience-sub-title">Achievements</h2>
+          <div class="list-container">
+            <div class="list-item">
+              <span class="list-item-bullet">•</span>
+              <p>Patent Filed: Real Time Public Transport Tracking Platform — smartBus — March 2026</p>
+            </div>
+            <div class="list-item">
+              <span class="list-item-bullet">•</span>
+              <p>Strong focus on cybersecurity, networking, and secure software design</p>
+            </div>
+            <div class="list-item">
+              <span class="list-item-bullet">•</span>
+              <p>Actively worked on hands-on projects involving encryption, scanning, and system analysis</p>
             </div>
           </div>
         </div>
       </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#projects'"
-      />
-    </section>
-    <section id="projects">
-      <p class="section__text__p1">Browse My Recent</p>
-      <h1 class="title">Projects</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-1.png"
-                alt="Project 1"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">
-              Real Time Public Transport Tracking Platform – smartBus
-            </h2>
-            <p style="margin-bottom: 1rem;">
-              A web-based platform for real-time bus tracking and ETA estimation using secure APIs and interactive maps.
-            </p>
-            <p style="margin-bottom: 1rem;">
-              Built with a government-grade UI, role-based access, and scalable architecture to simulate modern intelligent transport systems.
-            </p>
-            <p><strong>Tech:</strong> React, Vite, Node.js, MongoDB, Leaflet.js, Express</p>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/NishadSharma'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/NishadSharma'"
-              >
-                Live Demo
-              </button>
-            </div>
+    </div>
+    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#extracurricular'" />
+  </section>
+  <section id="extracurricular">
+    <p class="section__text__p1">Leadership &</p>
+    <h1 class="title">Extracurricular</h1>
+    <div class="experience-details-container">
+      <div class="about-containers">
+        <div class="details-container">
+          <h2 class="experience-sub-title">Waste Warriors Society | Volunteer</h2>
+          <div class="extracurricular-meta">
+            <span><strong>Location:</strong> Dharmshala, Himachal Pradesh</span>
+            <span class="meta-separator">•</span>
+            <span><strong>Duration:</strong> Jul 2023</span>
           </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-2.png"
-                alt="Project 2"
-                class="project-img"
-              />
+          <div class="list-container">
+            <div class="list-item">
+              <span class="list-item-bullet">•</span>
+              <p>Participated in awareness campaigns and data collection initiatives focused on sustainable waste
+                management.</p>
             </div>
-            <h2 class="experience-sub-title project-title">
-              Secure Image Steganography
-            </h2>
-            <p style="margin-bottom: 1rem;">
-              Developed a secure communication system by combining AES-256 encryption with LSB image steganography.
-            </p>
-            <p style="margin-bottom: 1rem;">
-              Implemented dual-layer secure data hiding in images and built both GUI and CLI versions with modular crypto and stego components.
-            </p>
-            <p><strong>Tech:</strong> Python, PyCryptodome, Pillow, Tkinter, Pytest</p>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/NishadSharma'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/NishadSharma'"
-              >
-                Live Demo
-              </button>
+            <div class="list-item">
+              <span class="list-item-bullet">•</span>
+              <p>Collaborated with a multidisciplinary team to plan and execute community outreach programs.</p>
             </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-3.png"
-                alt="Project 3"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">
-              Personal Vulnerability Scanner
-            </h2>
-            <p style="margin-bottom: 1rem;">
-              Developed a cross-platform vulnerability scanner to detect open ports, running services, and CVEs.
-            </p>
-            <p style="margin-bottom: 1rem;">
-              Automated multi-format reporting with exports in .txt, .csv, and .html for analysis and presentation.
-            </p>
-            <p><strong>Tech:</strong> Python, Nmap, Vulners NSE</p>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/NishadSharma'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/NishadSharma'"
-              >
-                Live Demo
-              </button>
+            <div class="list-item">
+              <span class="list-item-bullet">•</span>
+              <p>Edited video content and presentations to support educational outreach.</p>
             </div>
           </div>
         </div>
       </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#achievement'"
-      />
-    </section>
-    <section id="achievement">
-      <p class="section__text__p1">Achievements &</p>
-      <h1 class="title">Certifications</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container">
-            <h2 class="experience-sub-title">Certifications</h2>
-            <div class="text-container" style="text-align: left;">
-              <p>• Cyber Security 101 by TryHackMe — Aug 2025</p>
-              <p>• Cloud Computing by NPTEL SWAYAM — Oct 2024</p>
-              <p>• Master Java Programming by GeeksforGeeks — Apr 2024</p>
-              <p>• Mastering Data Structures using C & C++ by Udemy — Dec 2023</p>
-            </div>
-          </div>
-          <div class="details-container">
-            <h2 class="experience-sub-title">Achievements</h2>
-            <div class="text-container" style="text-align: left;">
-              <p>• Patent Filed: Real Time Public Transport Tracking Platform — smartBus — March 2026</p>
-              <p>• Strong focus on cybersecurity, networking, and secure software design</p>
-              <p>• Actively worked on hands-on projects involving encryption, scanning, and system analysis</p>
-            </div>
-          </div>
-        </div>
+    </div>
+    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#contact'" />
+  </section>
+  <section id="contact">
+    <p class="section__text__p1">Get in Touch</p>
+    <h1 class="title">Contact Me</h1>
+    <div class="contact-info-upper-container">
+      <div class="contact-info-container">
+        <img src="./assets/email.png" alt="Email icon" class="icon contact-icon" />
+        <p><a href="mailto:nishadsharma01@gmail.com">Gmail</a></p>
       </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#extracurricular'"
-      />
-    </section>
-    <section id="extracurricular">
-      <p class="section__text__p1">Leadership &</p>
-      <h1 class="title">Extracurricular</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container">
-            <h2 class="experience-sub-title">Waste Warriors Society | Volunteer</h2>
-            <p style="margin-bottom: 0.75rem;"><strong>Location:</strong> Dharmshala, Himachal Pradesh</p>
-            <p style="margin-bottom: 0.75rem;"><strong>Duration:</strong> Jul 2023</p>
-            <div class="text-container" style="text-align: left;">
-              <p>• Participated in awareness campaigns and data collection initiatives focused on sustainable waste management.</p>
-              <p>• Collaborated with a multidisciplinary team to plan and execute community outreach programs.</p>
-              <p>• Edited video content and presentations to support educational outreach.</p>
-            </div>
-          </div>
-        </div>
+      <div class="contact-info-container">
+        <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" />
+        <p><a href="https://www.linkedin.com/in/nishad-sharma/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </p>
       </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#contact'"
-      />
-    </section>
-    <section id="contact">
-      <p class="section__text__p1">Get in Touch</p>
-      <h1 class="title">Contact Me</h1>
-      <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-          <img
-            src="./assets/email.png"
-            alt="Email icon"
-            class="icon contact-icon email-icon"
-          />
-          <p><a href="mailto:nishadsharma01@gmail.com">Gmail</a></p>
-        </div>
-        <div class="contact-info-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="LinkedIn icon"
-            class="icon contact-icon"
-          />
-          <p><a href="https://www.linkedin.com/in/nishad-sharma/">LinkedIn</a></p>
-        </div>
+    </div>
+  </section>
+  <footer>
+    <nav>
+      <div class="nav-links-container">
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#achievement">Achievements</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
       </div>
-    </section>
-    <footer>
-      <nav>
-        <div class="nav-links-container">
-          <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#achievement">Achievements</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-      </nav>
-      <p>Copyright &#169; 2023 Nishad. All Rights Reserved.</p>
-    </footer>
-    <script src="/js/script.js"></script>
-  </body>
+    </nav>
+    <p>Copyright &#169; 2026 Nishad. All Rights Reserved.</p>
+  </footer>
+  <script src="./js/script.js"></script>
+</body>
+
 </html>
