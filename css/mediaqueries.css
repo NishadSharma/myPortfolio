@@ -1,13 +1,15 @@
 @media screen and (max-width: 1400px) {
   #profile {
-    height: 83vh;
+    min-height: 83vh;
     margin-bottom: 6rem;
   }
   .about-containers {
     flex-wrap: wrap;
   }
   #contact,
-  #projects {
+  #projects,
+  #achievement,
+  #extracurricular {
     height: fit-content;
   }
 }
@@ -26,6 +28,9 @@
   #profile,
   .section-container {
     display: block;
+  }
+  .about-containers {
+    flex-direction: column;
   }
   .arrow {
     display: none;
@@ -85,6 +90,9 @@
     flex-direction: column;
     gap: 0.5rem;
     text-align: center;
+  }
+  .project-img {
+    height: 180px;
   }
   .section__pic-container {
     width: auto;
