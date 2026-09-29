@@ -145,4 +145,11 @@
   .meta-separator {
     display: none;
   }
+
+  .back-to-top {
+    bottom: 1.25rem;
+    right: 1.25rem;
+    width: 2.75rem;
+    height: 2.75rem;
+  }
 }

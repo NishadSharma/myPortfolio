@@ -11,6 +11,7 @@
 </head>
 
 <body>
+  <div id="scroll-progress" class="scroll-progress"></div>
   <nav id="desktop-nav">
     <div class="nav-container">
       <div class="logo">myPortfolio</div>
@@ -56,15 +57,15 @@
         <button class="btn btn-color-2" onclick="window.open('./assets/resume-example.pdf')">
           Download CV
         </button>
-        <button class="btn btn-color-1" onclick="location.href='./#contact'">
+        <button class="btn btn-color-1" onclick="scrollToSection('contact')">
           Contact Info
         </button>
       </div>
       <div id="socials-container">
         <img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon"
-          onclick="location.href='https://www.linkedin.com/in/nishad-sharma/'" />
+          onclick="window.open('https://www.linkedin.com/in/nishad-sharma/', '_blank')" />
         <img src="./assets/github.png" alt="My Github profile" class="icon"
-          onclick="location.href='https://github.com/NishadSharma'" />
+          onclick="window.open('https://github.com/NishadSharma', '_blank')" />
       </div>
     </div>
   </section>
@@ -107,7 +108,7 @@
         </div>
       </div>
     </div>
-    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#experience'" />
+    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="scrollToSection('experience')" />
   </section>
   <section id="experience">
     <p class="section__text__p1">Explore My</p>
@@ -210,7 +211,7 @@
         </div>
       </div>
     </div>
-    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#projects'" />
+    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="scrollToSection('projects')" />
   </section>
   <section id="projects">
     <p class="section__text__p1">Browse My Recent</p>
@@ -233,10 +234,10 @@
           </p>
           <p class="project-tech"><strong>Tech:</strong> React, Vite, Node.js, MongoDB, Leaflet.js, Express</p>
           <div class="btn-container">
-            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/NishadSharma'">
+            <button class="btn btn-color-2 project-btn" onclick="window.open('https://github.com/NishadSharma', '_blank')">
               Github
             </button>
-            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/NishadSharma'">
+            <button class="btn btn-color-2 project-btn" onclick="window.open('https://github.com/NishadSharma', '_blank')">
               Live Demo
             </button>
           </div>
@@ -257,10 +258,10 @@
           </p>
           <p class="project-tech"><strong>Tech:</strong> Python, PyCryptodome, Pillow, Tkinter, Pytest</p>
           <div class="btn-container">
-            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/NishadSharma'">
+            <button class="btn btn-color-2 project-btn" onclick="window.open('https://github.com/NishadSharma', '_blank')">
               Github
             </button>
-            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/NishadSharma'">
+            <button class="btn btn-color-2 project-btn" onclick="window.open('https://github.com/NishadSharma', '_blank')">
               Live Demo
             </button>
           </div>
@@ -280,17 +281,17 @@
           </p>
           <p class="project-tech"><strong>Tech:</strong> Python, Nmap, Vulners NSE</p>
           <div class="btn-container">
-            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/NishadSharma'">
+            <button class="btn btn-color-2 project-btn" onclick="window.open('https://github.com/NishadSharma', '_blank')">
               Github
             </button>
-            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/NishadSharma'">
+            <button class="btn btn-color-2 project-btn" onclick="window.open('https://github.com/NishadSharma', '_blank')">
               Live Demo
             </button>
           </div>
         </div>
       </div>
     </div>
-    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#achievement'" />
+    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="scrollToSection('achievement')" />
   </section>
   <section id="achievement">
     <p class="section__text__p1">Achievements &</p>
@@ -337,7 +338,7 @@
         </div>
       </div>
     </div>
-    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#extracurricular'" />
+    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="scrollToSection('extracurricular')" />
   </section>
   <section id="extracurricular">
     <p class="section__text__p1">Leadership &</p>
@@ -369,7 +370,7 @@
         </div>
       </div>
     </div>
-    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#contact'" />
+    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="scrollToSection('contact')" />
   </section>
   <section id="contact">
     <p class="section__text__p1">Get in Touch</p>
@@ -386,6 +387,11 @@
       </div>
     </div>
   </section>
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top" title="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M18 15l-6-6-6 6"/>
+    </svg>
+  </button>
   <footer>
     <nav>
       <div class="nav-links-container">

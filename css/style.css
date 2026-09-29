@@ -20,6 +20,19 @@ body {
   line-height: 1.6;
   color: black;
   overflow-x: hidden;
+  opacity: 0;
+  animation: pageFadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes pageFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 img {
@@ -35,11 +48,25 @@ button {
   font-family: inherit;
 }
 
-/* TRANSITION */
+/* TRANSITION TOKENS */
 
 a,
 .btn {
-  transition: all 300ms ease;
+  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* SCROLL PROGRESS BAR */
+
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(90deg, #333333, #666666, #111111);
+  z-index: 999;
+  transition: width 0.1s ease-out;
+  pointer-events: none;
 }
 
 /* GLOBAL UNIFIED CONTAINER ALIGNMENT */
@@ -71,9 +98,20 @@ section {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(255, 255, 255, 0.96);
-  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  transition: background-color 0.35s ease,
+              box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.35s ease;
+}
+
+#desktop-nav.scrolled,
+#hamburger-nav.scrolled {
+  background: rgba(255, 255, 255, 0.98);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
 }
 
 .nav-container {
@@ -96,20 +134,53 @@ a {
   text-decoration: none;
 }
 
-a:hover {
-  color: grey;
-  text-decoration: underline;
-  text-underline-offset: 0.5rem;
-  text-decoration-color: rgb(181, 181, 181);
+/* SMOOTH NAV LINK UNDERLINE TRANSITION */
+
+.nav-links a {
+  position: relative;
+  display: inline-block;
+  padding: 0.35rem 0;
+  color: black;
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: black;
+  transition: width 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+  border-radius: 2px;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 100%;
+}
+
+.nav-links a:hover {
+  color: rgb(50, 50, 50);
+  text-decoration: none;
+}
+
+.nav-links a.active {
+  color: black;
+  font-weight: 600;
 }
 
 .logo {
   font-size: 1.85rem;
   font-weight: 600;
+  transition: opacity 0.25s ease, transform 0.25s ease;
 }
 
 .logo:hover {
   cursor: default;
+  opacity: 0.85;
 }
 
 /* HAMBURGER MENU */
@@ -130,13 +201,17 @@ a:hover {
   height: 24px;
   width: 30px;
   cursor: pointer;
+  padding: 2px 0;
 }
 
 .hamburger-icon span {
   width: 100%;
   height: 2px;
   background-color: black;
-  transition: all 0.3s ease-in-out;
+  border-radius: 2px;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              opacity 0.25s ease,
+              background-color 0.25s ease;
 }
 
 .menu-links {
@@ -145,18 +220,26 @@ a:hover {
   right: 0;
   background-color: white;
   min-width: 220px;
-  max-height: 0;
-  overflow: hidden;
-  transition: all 0.3s ease-in-out;
   border-radius: 1rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.14);
   border: 1px solid rgb(225, 225, 225);
   list-style: none;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px) scale(0.96);
+  transform-origin: top right;
+  transition: opacity 0.28s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.28s cubic-bezier(0.16, 1, 0.3, 1),
+              visibility 0.28s;
+  pointer-events: none;
+  padding: 0.5rem 0;
 }
 
 .menu-links.open {
-  max-height: 350px;
-  padding: 0.5rem 0;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
 }
 
 .menu-links a {
@@ -166,23 +249,29 @@ a:hover {
   font-size: 1.15rem;
   color: black;
   text-decoration: none;
-  transition: all 0.3s ease-in-out;
+  transition: background-color 0.25s ease,
+              color 0.25s ease,
+              transform 0.25s ease;
 }
 
-.menu-links a:hover {
+.menu-links a:hover,
+.menu-links a.active {
   background-color: rgb(245, 245, 245);
+  color: black;
+  font-weight: 500;
 }
 
 .hamburger-icon.open span:first-child {
-  transform: rotate(45deg) translate(8px, 6px);
+  transform: rotate(45deg) translate(6px, 6px);
 }
 
 .hamburger-icon.open span:nth-child(2) {
   opacity: 0;
+  transform: translateX(-10px);
 }
 
 .hamburger-icon.open span:last-child {
-  transform: rotate(-45deg) translate(8px, -6px);
+  transform: rotate(-45deg) translate(6px, -6px);
 }
 
 /* SECTION HEADINGS */
@@ -215,11 +304,26 @@ a:hover {
 .btn {
   font-weight: 600;
   font-size: 0.95rem;
-  transition: all 300ms ease;
   padding: 0.85rem 1.5rem;
   min-width: 8rem;
   border-radius: 2rem;
   text-align: center;
+  cursor: pointer;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              background-color 0.25s ease,
+              color 0.25s ease,
+              border-color 0.25s ease,
+              box-shadow 0.25s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
 }
 
 .btn-color-1,
@@ -240,6 +344,7 @@ a:hover {
 
 .btn-color-1:hover {
   background: rgb(0, 0, 0);
+  border-color: rgb(0, 0, 0);
 }
 
 .btn-color-2 {
@@ -258,6 +363,14 @@ a:hover {
   height: 2rem;
   width: auto;
   object-fit: contain;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              opacity 0.25s ease,
+              filter 0.25s ease;
+}
+
+#socials-container .icon:hover,
+.contact-icon:hover {
+  transform: translateY(-3px) scale(1.12);
 }
 
 .arrow {
@@ -266,11 +379,23 @@ a:hover {
   bottom: 1.5rem;
   cursor: pointer;
   height: 2rem;
-  transition: transform 0.2s ease;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              opacity 0.3s ease;
+  animation: smoothBounce 2.5s ease-in-out infinite;
+}
+
+@keyframes smoothBounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(6px);
+  }
 }
 
 .arrow:hover {
-  transform: translateY(4px);
+  animation-play-state: paused;
+  transform: translateY(8px) scale(1.15);
 }
 
 /* PROFILE (HERO) SECTION */
@@ -292,17 +417,46 @@ a:hover {
   height: 380px;
   width: 380px;
   flex-shrink: 0;
+  animation: heroPicEntrance 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 #profile .section__pic-container img {
   width: 100%;
   height: 100%;
   object-fit: contain;
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+#profile .section__pic-container:hover img {
+  transform: scale(1.03) translateY(-4px);
 }
 
 #profile .section__text {
   align-self: center;
   text-align: center;
+  animation: heroTextEntrance 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.15s both;
+}
+
+@keyframes heroPicEntrance {
+  from {
+    opacity: 0;
+    transform: scale(0.92) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes heroTextEntrance {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 #profile .title {
@@ -346,6 +500,13 @@ a:hover {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.4s ease;
+}
+
+#about .section__pic-container:hover .about-pic {
+  transform: scale(1.025);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
 }
 
 .about-details-container {
@@ -373,6 +534,15 @@ a:hover {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.35s ease;
+}
+
+.details-container:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+  border-color: rgb(85, 85, 85);
 }
 
 .details-container > .icon {
@@ -428,6 +598,15 @@ article {
   align-items: flex-start;
   gap: 0.85rem;
   text-align: left;
+  padding: 0.5rem 0.65rem;
+  border-radius: 0.75rem;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              background-color 0.25s ease;
+}
+
+article:hover {
+  background-color: rgba(0, 0, 0, 0.035);
+  transform: translateX(5px);
 }
 
 article .icon {
@@ -436,6 +615,11 @@ article .icon {
   cursor: default;
   flex-shrink: 0;
   margin-top: 0.15rem;
+  transition: transform 0.25s ease;
+}
+
+article:hover .icon {
+  transform: scale(1.15) rotate(5deg);
 }
 
 article h3 {
@@ -465,6 +649,15 @@ article p {
   flex-direction: column;
   text-align: center;
   padding: 1.5rem;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.35s ease;
+}
+
+.color-container:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.1);
+  border-color: rgb(90, 90, 90);
 }
 
 .project-img-container {
@@ -480,6 +673,12 @@ article p {
   object-fit: cover;
   border-radius: 1.5rem;
   display: block;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+              filter 0.5s ease;
+}
+
+.color-container:hover .project-img {
+  transform: scale(1.05);
 }
 
 .project-title {
@@ -540,6 +739,15 @@ article p {
   display: flex;
   align-items: flex-start;
   gap: 0.65rem;
+  padding: 0.4rem 0.6rem;
+  border-radius: 0.6rem;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              background-color 0.25s ease;
+}
+
+.list-item:hover {
+  background-color: rgba(0, 0, 0, 0.03);
+  transform: translateX(5px);
 }
 
 .list-item-bullet {
@@ -547,6 +755,12 @@ article p {
   font-size: 1.1rem;
   line-height: 1.4;
   flex-shrink: 0;
+  transition: transform 0.25s ease, color 0.25s ease;
+}
+
+.list-item:hover .list-item-bullet {
+  transform: scale(1.2);
+  color: black;
 }
 
 .list-item p {
@@ -605,6 +819,15 @@ article p {
   padding: 0.75rem 2rem;
   gap: 2rem;
   flex-wrap: wrap;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.35s ease;
+}
+
+.contact-info-upper-container:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+  border-color: rgb(100, 100, 100);
 }
 
 .contact-info-container {
@@ -656,4 +879,109 @@ footer p {
   text-align: center;
   font-size: 0.9rem;
   color: rgb(110, 110, 110);
+}
+
+/* SCROLL REVEAL ANIMATIONS */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.delay-1 {
+  transition-delay: 0.1s;
+}
+
+.delay-2 {
+  transition-delay: 0.2s;
+}
+
+.delay-3 {
+  transition-delay: 0.3s;
+}
+
+/* BACK TO TOP BUTTON */
+
+.back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: white;
+  color: black;
+  border: 1px solid rgb(200, 200, 200);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 99;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(16px) scale(0.9);
+  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              visibility 0.3s,
+              background-color 0.25s ease,
+              border-color 0.25s ease,
+              color 0.25s ease,
+              box-shadow 0.25s ease;
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+}
+
+.back-to-top:hover {
+  background: black;
+  color: white;
+  border-color: black;
+  transform: translateY(-3px) scale(1.06);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+}
+
+.back-to-top:active {
+  transform: translateY(0) scale(0.98);
+}
+
+/* REDUCED MOTION PREFERENCE */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  body {
+    opacity: 1 !important;
+    animation: none !important;
+  }
+
+  .arrow {
+    animation: none !important;
+  }
 }
